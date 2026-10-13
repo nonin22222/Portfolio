@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Natthanon Sonsawan | Full-Stack Developer Portfolio</title>
-  <meta name="description" content="Portfolio of Natthanon Sonsawan - Full-Stack Developer & Software Engineer. Production-tested systems in ERP, HR & Payroll, E-Commerce, and FinTech platforms." />
+  <title>ณัฏฐนนท์ ศรสวรรค์ (นนท์) | Full-Stack Developer</title>
+  <meta name="description" content="Portfolio & Resume ของ ณัฏฐนนท์ ศรสวรรค์ (นนท์) - Full-Stack Developer ประสบการณ์เกือบ 4 ปี เชี่ยวชาญ ERP, CRM, POS, Booking และ E-commerce (PHP, Node.js, Vue.js, MySQL)" />
   <meta name="author" content="Natthanon Sonsawan (ณัฏฐนนท์ ศรสวรรค์)" />
 
-  <!-- Open Graph / Meta for Social & Recruiters -->
+  <!-- Open Graph Meta -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Natthanon Sonsawan | Full-Stack Developer" />
-  <meta property="og:description" content="Enterprise ERP, HR & Payroll Systems, E-Commerce and FinTech Architectures by Natthanon Sonsawan." />
+  <meta property="og:title" content="ณัฏฐนนท์ ศรสวรรค์ (นนท์) | Full-Stack Developer" />
+  <meta property="og:description" content="Web & Software Developer ประสบการณ์เกือบ 4 ปี เชี่ยวชาญ ERP, CRM, POS, Booking & E-Commerce" />
   <meta property="og:image" content="./me/profile_portrait.jpg" />
 
   <!-- Google Fonts: Plus Jakarta Sans & Prompt -->
@@ -42,9 +42,10 @@
 
       <ul class="nav-menu" id="navMenu">
         <li><a href="#about" class="nav-link" data-i18n="navAbout">เกี่ยวกับฉัน</a></li>
-        <li><a href="#skills" class="nav-link" data-i18n="navSkills">ทักษะ & เทคโนโลยี</a></li>
-        <li><a href="#projects" class="nav-link" data-i18n="navProjects">ผลงานที่พัฒนา</a></li>
-        <li><a href="#capabilities" class="nav-link" data-i18n="navCapabilities">ความเชี่ยวชาญ</a></li>
+        <li><a href="#experience" class="nav-link" data-i18n="navExp">ประสบการณ์ทำงาน</a></li>
+        <li><a href="#education" class="nav-link" data-i18n="navEdu">การศึกษา</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="navSkills">ทักษะ</a></li>
+        <li><a href="#portfolio" class="nav-link" data-i18n="navProjects">ผลงาน Portfolio</a></li>
         <li><a href="#contact" class="nav-link" data-i18n="navContact">ติดต่อ</a></li>
       </ul>
 
@@ -56,7 +57,7 @@
         <!-- Mobile Toggle -->
         <button id="mobileToggle" class="btn-icon mobile-toggle" title="Menu">☰</button>
         <!-- Quick CTA -->
-        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="btnContact">ติดต่อ</a>
+        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="btnContact">ติดต่อร่วมงาน</a>
       </div>
     </div>
   </nav>
@@ -68,76 +69,81 @@
         <div class="hero-badge-wrap">
           <span class="badge badge-emerald">
             <span class="brand-dot"></span>
-            <span data-i18n="heroBadge">พร้อมเริ่มงานทันที</span>
+            <span data-i18n="heroBadge">เปิดรับโอกาสงานทันที</span>
           </span>
           <span class="badge">Full-Stack Developer</span>
         </div>
 
         <h1 class="hero-title">
           <span class="text-gradient" data-i18n="heroTitle">ณัฏฐนนท์ ศรสวรรค์</span>
+          <span style="font-size: 2rem; color: var(--text-muted); font-weight: 600;" data-i18n="heroNickname">(นนท์)</span>
         </h1>
 
         <div class="hero-role">
           <span>⚡</span>
-          <span data-i18n="heroRole">Full-Stack Developer & Software Engineer</span>
+          <span data-i18n="heroRole">FULL-STACK DEVELOPER</span>
+        </div>
+
+        <!-- Tech Stack Pill Highlights -->
+        <div class="hero-tech-highlight">
+          <span class="hero-tech-pill">PHP</span>
+          <span class="hero-tech-pill">Node.js</span>
+          <span class="hero-tech-pill">Vue.js</span>
+          <span class="hero-tech-pill">MySQL</span>
+          <span class="hero-tech-pill">React / Next.js</span>
         </div>
 
         <p class="hero-description" data-i18n="heroDesc">
-          เชี่ยวชาญการออกแบบและพัฒนาระบบระดับองค์กร (ERP), ระบบบริหารงานบุคคล (HRM & Payroll), เว็บสโตร์ E-Commerce และแพลตฟอร์ม FinTech ที่ต้องการความแม่นยำ ปลอดภัย และรองรับผู้ใช้งานจริง
+          Web & Software Developer ประสบการณ์เกือบ 4 ปี เชี่ยวชาญการพัฒนาระบบธุรกิจครบวงจร ทั้ง ERP, CRM, POS หลายสาขา, ระบบจอง (Booking) และ E-commerce พร้อมทักษะด้าน Web Scraping, Google Merchant และงาน WordPress เชิงลึกควบคู่กับการทำ SEO เน้นสร้างระบบที่เสถียรและแก้ปัญหาธุรกิจได้จริง
         </p>
 
         <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary" data-i18n="btnProjects">
-            <span>ดูผลงานจริงทั้งหมด</span>
+          <a href="#portfolio" class="btn btn-primary" data-i18n="btnProjects">
+            <span>ดูผลงานระบบจริง (Portfolio)</span>
             <span>↓</span>
           </a>
           <button class="btn btn-secondary" onclick="copyEmail()">
             <span>✉️</span>
             <span data-i18n="btnCopyEmail">คัดลอกอีเมล</span>
           </button>
-          <a href="#contact" class="btn btn-outline" data-i18n="btnContact">ติดต่อเพื่อเริ่มงาน</a>
+          <a href="https://github.com/nonin22222" target="_blank" rel="noopener" class="btn btn-outline">
+            <span>🐙 GitHub</span>
+          </a>
         </div>
 
         <!-- Quick Stats -->
         <div class="hero-stats">
           <div class="stat-item">
-            <h3>6+</h3>
-            <p data-i18n="stat1Label">ระบบโปรดักชันจริง</p>
+            <h3 data-i18n="statExpVal">เกือบ 4 ปี</h3>
+            <p data-i18n="statExpLabel">ประสบการณ์พัฒนาซอฟต์แวร์</p>
           </div>
           <div class="stat-item">
-            <h3>100%</h3>
-            <p data-i18n="stat2Label">Full-Stack Lifecycle</p>
+            <h3 data-i18n="statGpaVal">3.61</h3>
+            <p data-i18n="statGpaLabel">GPA เกียรตินิยม มทร.ล้านนา</p>
           </div>
           <div class="stat-item">
-            <h3>ERP / HR</h3>
-            <p data-i18n="stat3Label">Core Business Platforms</p>
+            <h3 data-i18n="statCoreVal">ERP & FinTech</h3>
+            <p data-i18n="statCoreLabel">ระบบโปรดักชันระดับธุรกิจ</p>
           </div>
         </div>
       </div>
 
-      <!-- Hero Visual / Photo Card -->
+      <!-- Hero Visual / Single Profile Photo Card -->
       <div class="hero-visual">
         <div class="avatar-card">
-          <!-- Photo Switcher Tabs -->
-          <div class="avatar-photo-switch">
-            <button class="photo-tab-btn active" data-photo="studio" data-i18n="photoTabStudio">โปรไฟล์</button>
-            <button class="photo-tab-btn" data-photo="formal" data-i18n="photoTabFormal">รูปติดบัตร</button>
-            <button class="photo-tab-btn" data-photo="casual" data-i18n="photoTabCasual">กิจกรรม</button>
-          </div>
-
           <div class="avatar-image-wrap">
-            <img src="./me/profile_portrait.jpg" alt="Natthanon Sonsawan - Full-Stack Developer" id="heroAvatarImg" class="avatar-img" />
+            <img src="./me/profile_portrait.jpg" alt="ณัฏฐนนท์ ศรสวรรค์ (นนท์) - Full-Stack Developer" id="heroAvatarImg" class="avatar-img" />
           </div>
 
           <div class="avatar-meta">
             <div class="avatar-meta-header">
-              <span class="avatar-name">Natthanon Sonsawan</span>
+              <span class="avatar-name">ณัฏฐนนท์ ศรสวรรค์ (นนท์)</span>
               <span class="avatar-tag">● Open to Work</span>
             </div>
             <div class="avatar-details">
               <div class="avatar-detail-row">
                 <span>💼</span>
-                <span>Software Engineer / Full-Stack</span>
+                <span>Full-Stack Developer</span>
               </div>
               <div class="avatar-detail-row">
                 <span>📍</span>
@@ -150,8 +156,8 @@
           <div class="float-card float-card-1">
             <div class="float-icon icon-erp">⚙️</div>
             <div class="float-text">
-              <h5>ERP & HRM</h5>
-              <p>Business Automation</p>
+              <h5>ERP, CRM & POS</h5>
+              <p>Business Systems</p>
             </div>
           </div>
 
@@ -159,7 +165,7 @@
             <div class="float-icon icon-fullstack">💻</div>
             <div class="float-text">
               <h5>Full-Stack Dev</h5>
-              <p>Frontend + Backend + DB</p>
+              <p>PHP • Node • Vue • SQL</p>
             </div>
           </div>
         </div>
@@ -172,38 +178,48 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag" data-i18n="aboutTag">About Me</span>
-        <h2 class="section-title" data-i18n="aboutTitle">มุ่งมั่นสร้างซอฟต์แวร์ที่ตอบโจทย์ธุรกิจจริง</h2>
+        <h2 class="section-title" data-i18n="aboutTitle">ประวัติและข้อมูลส่วนตัว</h2>
       </div>
 
       <div class="about-grid">
         <!-- Personal Contact Card -->
         <div class="about-card-left">
-          <h3>Personal Details</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">ข้อมูลส่วนตัวและการติดต่อ</p>
+          <h3>ข้อมูลส่วนตัวและการติดต่อ</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">Personal & Contact Profile</p>
 
           <div class="about-info-list">
             <div class="info-item">
               <div class="info-icon">👤</div>
               <div class="info-content">
                 <label data-i18n="infoName">ชื่อ-นามสกุล</label>
-                <span>นายณัฏฐนนท์ ศรสวรรค์ (นน / Nonin)</span>
+                <span>นายณัฏฐนนท์ ศรสวรรค์</span>
               </div>
             </div>
 
             <div class="info-item">
-              <div class="info-icon">💻</div>
+              <div class="info-icon">🏷️</div>
               <div class="info-content">
-                <label data-i18n="infoRole">ตำแหน่งที่เปิดรับ</label>
-                <span class="text-gradient">Full-Stack Developer / Software Engineer</span>
+                <label data-i18n="infoNickname">ชื่อเล่น</label>
+                <span>นนท์ (Nonin)</span>
               </div>
             </div>
 
             <div class="info-item">
-              <div class="info-icon">✉️</div>
+              <div class="info-icon">🎂</div>
               <div class="info-content">
-                <label data-i18n="infoEmail">อีเมล</label>
-                <span>nonin31313@gmail.com</span>
-                <button class="copy-btn-inline" onclick="copyEmail()" title="คัดลอกอีเมล">Copy</button>
+                <label data-i18n="infoAge">อายุ</label>
+                <span>27 ปี (เพศ: ชาย)</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">🎓</div>
+              <div class="info-content">
+                <label data-i18n="infoDegree">การศึกษา</label>
+                <span>ปริญญาตรี สาขาการพัฒนาซอฟต์แวร์ทางธุรกิจ</span>
+                <div style="font-size: 0.85rem; color: var(--accent-tertiary); margin-top: 2px;">
+                  มทร.ล้านนา (GPA 3.61)
+                </div>
               </div>
             </div>
 
@@ -217,18 +233,27 @@
             </div>
 
             <div class="info-item">
-              <div class="info-icon">📍</div>
+              <div class="info-icon">✉️</div>
               <div class="info-content">
-                <label data-i18n="infoLocation">ที่อยู่ / รูปแบบการทำงาน</label>
-                <span data-i18n="infoLocationVal">เชียงใหม่, ประเทศไทย (พร้อม On-site / Remote)</span>
+                <label data-i18n="infoEmail">อีเมล</label>
+                <span>nonin31313@gmail.com</span>
+                <button class="copy-btn-inline" onclick="copyEmail()" title="คัดลอกอีเมล">Copy</button>
               </div>
             </div>
 
             <div class="info-item">
-              <div class="info-icon">🚀</div>
+              <div class="info-icon">🐙</div>
               <div class="info-content">
-                <label data-i18n="infoStatus">สถานะการทำงาน</label>
-                <span style="color: var(--accent-tertiary);" data-i18n="infoStatusVal">พร้อมเริ่มงานทันที (Ready to hire)</span>
+                <label data-i18n="infoGithub">GitHub Profile</label>
+                <a href="https://github.com/nonin22222" target="_blank" rel="noopener">github.com/nonin22222</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div class="info-content">
+                <label data-i18n="infoLocation">สถานที่ทำงาน</label>
+                <span data-i18n="infoLocationVal">เชียงใหม่ / พร้อมทำงาน On-site และ Remote</span>
               </div>
             </div>
           </div>
@@ -236,29 +261,26 @@
 
         <!-- Biography and Principles -->
         <div class="about-content-right">
-          <p class="about-text" data-i18n="aboutDesc1">
-            สวัสดีครับ ผม ณัฏฐนนท์ ศรสวรรค์ (นน) นักพัฒนา Full-Stack Developer ที่มีประสบการณ์ทำงานจริงในการสร้างระบบซอฟต์แวร์ระดับ Core Business ให้กับหลากหลายองค์กร ไม่ว่าจะเป็นระบบ ERP สำหรับคลังสินค้าและจัดซื้อ, ระบบ HRM คำนวณเงินเดือนและภาษี, ไปจนถึง E-Commerce และระบบแลกเปลี่ยนเงินตรา
-          </p>
-          <p class="about-text" data-i18n="aboutDesc2">
-            ผมให้ความสำคัญทั้งความถูกต้องของ Business Logic, ความปลอดภัยของฐานข้อมูล, ประสิทธิภาพในการประมวลผลข้อมูลปริมาณมาก และการส่งมอบ UI ที่ผู้ใช้งานทำงานได้อย่างลื่นไหล รวดเร็ว และไม่มีข้อผิดพลาด
+          <p class="about-text" style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); line-height: 1.8;">
+            "ผม ณัฏฐนนท์ ศรสวรรค์ (นนท์) ครับ เป็น Web & Software Developer ประสบการณ์เกือบ 4 ปี เชี่ยวชาญการพัฒนาระบบธุรกิจครบวงจร ทั้ง ERP, CRM, POS หลายสาขา, ระบบจอง (Booking) และ E-commerce พร้อมทักษะด้าน Web Scraping, Google Merchant และงาน WordPress เชิงลึกควบคู่กับการทำ SEO เน้นสร้างระบบที่เสถียรและแก้ปัญหาธุรกิจได้จริงครับ"
           </p>
 
           <div class="about-highlights">
             <div class="highlight-box">
-              <h4><span>🎯</span> <span>Complex Business Logic</span></h4>
-              <p>เข้าใจกระบวนการทำงานจริง เช่น การคำนวณเงินเดือน วันลา ภาษี และต้นทุนสินค้า</p>
+              <h4><span>🎯</span> <span>Enterprise Business Systems</span></h4>
+              <p>เข้าใจลอจิกธุรกิจจริง ทั้งระบบสต็อกหลายสาขา การคำนวณเงินเดือน และภาษี</p>
             </div>
             <div class="highlight-box">
-              <h4><span>⚡</span> <span>End-to-End Delivery</span></h4>
-              <p>สร้างได้ตั้งแต่ Database Schema, API Backend ไปจนถึง UI Frontend ที่ตอบสนองลื่นไหล</p>
+              <h4><span>⚡</span> <span>Full-Stack Mastery</span></h4>
+              <p>พัฒนาได้ครบวงจรตั้งแต่ Schema ฐานข้อมูล, API Backend จนถึง UI Frontend</p>
             </div>
             <div class="highlight-box">
-              <h4><span>🔒</span> <span>Security & RBAC</span></h4>
-              <p>ควบคุมสิทธิ์การเข้าถึงข้อมูลตามบทบาทผู้ใช้ (Admin, Manager, Employee, Merchant)</p>
+              <h4><span>🔍</span> <span>Web Scraping & Integrations</span></h4>
+              <p>เชื่อมต่อ Google Merchant, API ภายนอก และระบบดึงข้อมูลอัตโนมัติ</p>
             </div>
             <div class="highlight-box">
-              <h4><span>📊</span> <span>Analytics & Reports</span></h4>
-              <p>สร้างแดชบอร์ดสรุปยอดขาย กราฟวิเคราะห์ และระบบ Export เอกสาร Excel/PDF</p>
+              <h4><span>📈</span> <span>SEO & Performance</span></h4>
+              <p>โครงสร้างเว็บไซต์ตามหลัก SEO เพื่อผลลัพธ์ทางการตลาดและยอดขาย</p>
             </div>
           </div>
         </div>
@@ -266,162 +288,255 @@
     </div>
   </section>
 
-  <!-- Skills & Tech Stack Matrix -->
-  <section id="skills">
+  <!-- Work Experience Section (ประสบการณ์ทำงาน) -->
+  <section id="experience" style="background: rgba(15, 23, 42, 0.45);">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag" data-i18n="skillTag">Tech Stack</span>
+        <span class="section-tag" data-i18n="expTag">Work Experience</span>
+        <h2 class="section-title" data-i18n="expTitle">ประสบการณ์ทำงานจริง</h2>
+        <p class="section-subtitle" data-i18n="expSubtitle">ประวัติการทำงานในฐานะ Web & Software Developer ในองค์กรต่างๆ</p>
+      </div>
+
+      <div class="experience-timeline">
+        <!-- Job 1: D DOT FARM -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-company">D DOT FARM</span>
+              <span class="timeline-badge">2 ปี 3 เดือน</span>
+            </div>
+            <div class="timeline-role">FULL-STACK DEVELOPER</div>
+            <ul class="timeline-tasks">
+              <li>ทำระบบและดูแลระบบ ERP, CRM, POS และ Google Merchant</li>
+              <li>พัฒนา Web Scraping และซอฟต์แวร์สนับสนุนงานภายในองค์กร</li>
+              <li>ดูแลและบริหารโครงการ Outsource เช่น เว็บไซต์อ่านค่าฝุ่น PM 2.5, ระบบห้องสมุด</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Job 2: DIGITAL DEVELOPER -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-company">DIGITAL DEVELOPER</span>
+              <span class="timeline-badge">7 เดือน</span>
+            </div>
+            <div class="timeline-role">BACKEND DEVELOPER</div>
+            <ul class="timeline-tasks">
+              <li>พัฒนาระบบ POS และระบบ Stock สินค้าของแต่ละสาขา</li>
+              <li>พัฒนาระบบ Booking โรงแรม</li>
+              <li>พัฒนาระบบ E-Commerce มารวย</li>
+              <li>พัฒนาระบบ การจัดการใบเสนอราคา S-mart Pro</li>
+              <li>พัฒนาระบบ HR (Human Resource Management)</li>
+              <li>พัฒนาระบบ จองรถทัวร์</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Job 3: IMAGESHUBS -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-company">IMAGESHUBS</span>
+              <span class="timeline-badge">1 ปี</span>
+            </div>
+            <div class="timeline-role">PROGRAMMER</div>
+            <ul class="timeline-tasks">
+              <li>พัฒนาเว็บไซต์และโปรแกรมดูดวง (WordPress)</li>
+              <li>พัฒนาเว็บไซต์คลินิกหมอฟัน (WordPress)</li>
+              <li>พัฒนาเว็บไซต์สำนักงานรับทำบัญชี (WordPress)</li>
+              <li>พัฒนาเว็บไซต์ขายกล้องวงจรปิด (WordPress)</li>
+              <li>ทำ SEO ในเว็บไซต์ และตัดต่อวิดีโอคลิปโปรโมท</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section (การศึกษา) -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="eduTag">Education</span>
+        <h2 class="section-title" data-i18n="eduTitle">ประวัติการศึกษา</h2>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-header">
+            <div>
+              <h3 class="edu-school">มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา (RMUTL)</h3>
+              <div class="edu-degree">ปริญญาตรี — สาขาการพัฒนาซอฟต์แวร์ทางธุรกิจ (Business Software Development)</div>
+            </div>
+            <div class="edu-gpa-badge">
+              <span>🏆 GPA 3.61 (เกียรตินิยม)</span>
+            </div>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            <strong>ปีที่สำเร็จการศึกษา:</strong> 2022<br />
+            <strong>โครงงานและระบบจบการศึกษา:</strong> ระบบสารสนเทศเพื่อการบริหารจัดการร้าน W.R.Y. Bakery
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programmer Skills Matrix (ตรงตาม Resume) -->
+  <section id="skills" style="background: rgba(15, 23, 42, 0.4);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="skillTag">Programmer Skills</span>
         <h2 class="section-title" data-i18n="skillTitle">ทักษะและความสามารถทางเทคนิค</h2>
-        <p class="section-subtitle" data-i18n="skillSubtitle">เครื่องมือและเทคโนโลยีที่ใช้จริงในการสร้างสรรค์ระบบงานคุณภาพ</p>
+        <p class="section-subtitle" data-i18n="skillSubtitle">เทคโนโลยีและเครื่องมือที่เชี่ยวชาญตามประวัติการทำงานจริง</p>
       </div>
 
       <div class="skills-grid">
-        <!-- Frontend -->
+        <!-- Frontend Development -->
         <div class="skill-card">
           <div class="skill-card-top">
             <div class="skill-icon">🎨</div>
             <div class="skill-meta">
               <h4>Frontend Development</h4>
-              <span>UI / UX & Interactive Web</span>
+              <span>Vue, Nuxt, React & CSS</span>
             </div>
           </div>
           <p style="font-size: 0.88rem; color: var(--text-muted);">
-            สร้างเว็บอินเทอร์เฟซที่ทันสมัย ตอบสนองทุกขนาดหน้าจอ โหลดรวดเร็ว และใช้งานง่าย
+            สร้าง Web App ที่โต้ตอบลื่นไหล รองรับ Responsive ทุกหน้าจอ
           </p>
           <div class="skill-tags">
-            <span class="skill-tag-pill">HTML5</span>
-            <span class="skill-tag-pill">Modern CSS3</span>
-            <span class="skill-tag-pill">JavaScript ES6+</span>
-            <span class="skill-tag-pill">Responsive Design</span>
-            <span class="skill-tag-pill">Highcharts / Chart.js</span>
-            <span class="skill-tag-pill">Glassmorphism UI</span>
+            <span class="skill-tag-pill">VUE.JS</span>
+            <span class="skill-tag-pill">NUXT</span>
+            <span class="skill-tag-pill">REACT / NEXT.JS</span>
+            <span class="skill-tag-pill">TAILWIND CSS</span>
+            <span class="skill-tag-pill">BOOTSTRAP</span>
+            <span class="skill-tag-pill">HTML5 / CSS3</span>
           </div>
         </div>
 
-        <!-- Backend & APIs -->
+        <!-- Backend Development -->
         <div class="skill-card">
           <div class="skill-card-top">
             <div class="skill-icon">⚙️</div>
             <div class="skill-meta">
               <h4>Backend & APIs</h4>
-              <span>Server-Side & Business Logic</span>
+              <span>Node.js, PHP & CodeIgniter</span>
             </div>
           </div>
           <p style="font-size: 0.88rem; color: var(--text-muted);">
-            ออกแบบ RESTful API ที่เสถียร เชื่อมต่อฐานข้อมูล ปลอดภัย และจัดการสิทธิ์ผู้ใช้งาน
+            สถาปัตยกรรมเซิร์ฟเวอร์ ออกแบบ REST API และลอจิกคำนวณซับซ้อน
           </p>
           <div class="skill-tags">
-            <span class="skill-tag-pill">RESTful APIs</span>
-            <span class="skill-tag-pill">Node.js / Express</span>
-            <span class="skill-tag-pill">PHP / MVC</span>
-            <span class="skill-tag-pill">Authentication & Session</span>
-            <span class="skill-tag-pill">RBAC Permissions</span>
-            <span class="skill-tag-pill">Business Calculation Engine</span>
+            <span class="skill-tag-pill">PHP</span>
+            <span class="skill-tag-pill">CODEIGNITER</span>
+            <span class="skill-tag-pill">NODE.JS</span>
+            <span class="skill-tag-pill">EXPRESS.JS</span>
+            <span class="skill-tag-pill">RESTFUL APIS</span>
+            <span class="skill-tag-pill">WEB SCRAPING</span>
           </div>
         </div>
 
-        <!-- Database -->
+        <!-- Database & Data -->
         <div class="skill-card">
           <div class="skill-card-top">
             <div class="skill-icon">🗄️</div>
             <div class="skill-meta">
-              <h4>Database & Storage</h4>
-              <span>Data Modeling & Queries</span>
+              <h4>Database Management</h4>
+              <span>SQL & NoSQL</span>
             </div>
           </div>
           <p style="font-size: 0.88rem; color: var(--text-muted);">
-            ออกแบบตารางฐานข้อมูลเชิงสัมพันธ์ ทำ Indexing ดูแลความสมบูรณ์ของข้อมูลธุรกรรม
+            ออกแบบตารางฐานข้อมูลเชิงสัมพันธ์ ดูแลความสมบูรณ์ของข้อมูลธุรกรรม
           </p>
           <div class="skill-tags">
-            <span class="skill-tag-pill">MySQL</span>
-            <span class="skill-tag-pill">PostgreSQL</span>
-            <span class="skill-tag-pill">Relational Schema Design</span>
-            <span class="skill-tag-pill">Query Optimization</span>
-            <span class="skill-tag-pill">Transactions & Locking</span>
-            <span class="skill-tag-pill">Data Integrity</span>
+            <span class="skill-tag-pill">MYSQL</span>
+            <span class="skill-tag-pill">SQL / NOSQL</span>
+            <span class="skill-tag-pill">QUERY OPTIMIZATION</span>
+            <span class="skill-tag-pill">DATA MODELING</span>
+            <span class="skill-tag-pill">TRANSACTIONS</span>
           </div>
         </div>
 
-        <!-- Enterprise Systems -->
-        <div class="skill-card">
-          <div class="skill-card-top">
-            <div class="skill-icon">🏢</div>
-            <div class="skill-meta">
-              <h4>Enterprise Architectures</h4>
-              <span>ERP, HRM & E-Commerce</span>
-            </div>
-          </div>
-          <p style="font-size: 0.88rem; color: var(--text-muted);">
-            ความเข้าใจกระบวนการทำงานระดับองค์กร ทั้งบัญชีเงินเดือน คลังสินค้า และคำสั่งซื้อ
-          </p>
-          <div class="skill-tags">
-            <span class="skill-tag-pill">ERP Multi-Branch</span>
-            <span class="skill-tag-pill">HRM Clock-in/out</span>
-            <span class="skill-tag-pill">Automated Payroll</span>
-            <span class="skill-tag-pill">Multi-Vendor Cart</span>
-            <span class="skill-tag-pill">Inventory Tracking</span>
-            <span class="skill-tag-pill">Excel & PDF Generator</span>
-          </div>
-        </div>
-
-        <!-- Tools & Deployment -->
+        <!-- DevOps & CI/CD -->
         <div class="skill-card">
           <div class="skill-card-top">
             <div class="skill-icon">🚀</div>
             <div class="skill-meta">
               <h4>DevOps & Tools</h4>
-              <span>Version Control & Hosting</span>
+              <span>Docker & Git Pipelines</span>
             </div>
           </div>
           <p style="font-size: 0.88rem; color: var(--text-muted);">
-            การบริหารจัดการซอร์สโค้ด การ Deploy ขึ้นเซิร์ฟเวอร์ และการทำงานเป็นทีม
+            การบริหารจัดการโค้ดและการ Deploy ด้วยระบบอัตโนมัติ
           </p>
           <div class="skill-tags">
-            <span class="skill-tag-pill">Git</span>
-            <span class="skill-tag-pill">GitHub</span>
-            <span class="skill-tag-pill">GitHub Pages</span>
-            <span class="skill-tag-pill">Linux / Web Server</span>
-            <span class="skill-tag-pill">API Testing</span>
-            <span class="skill-tag-pill">Responsive QA</span>
+            <span class="skill-tag-pill">GIT HUB</span>
+            <span class="skill-tag-pill">DOCKER</span>
+            <span class="skill-tag-pill">CI/CD PIPELINES</span>
+            <span class="skill-tag-pill">GITHUB PAGES</span>
+            <span class="skill-tag-pill">LINUX DEPLOY</span>
           </div>
         </div>
 
-        <!-- FinTech & Third-Party APIs -->
+        <!-- CMS & Solutions -->
         <div class="skill-card">
           <div class="skill-card-top">
-            <div class="skill-icon">💳</div>
+            <div class="skill-icon">🌐</div>
             <div class="skill-meta">
-              <h4>Integrations & FinTech</h4>
-              <span>Third-Party APIs & Rates</span>
+              <h4>CMS & Solutions</h4>
+              <span>WordPress & SEO</span>
             </div>
           </div>
           <p style="font-size: 0.88rem; color: var(--text-muted);">
-            การเชื่อมต่อระบบภายนอก เช่น อัตราแลกเปลี่ยนเงินตรา โซเชียลมีเดีย และ LINE API
+            พัฒนาเว็บไซต์ WordPress ระดับแอดวานซ์ และปรับแต่ง SEO ติดอันดับ
           </p>
           <div class="skill-tags">
-            <span class="skill-tag-pill">Real-time FX Boards</span>
-            <span class="skill-tag-pill">Rate-Lock Booking</span>
-            <span class="skill-tag-pill">LINE Official API</span>
-            <span class="skill-tag-pill">TikTok Video Embed</span>
-            <span class="skill-tag-pill">Payment Flow Handling</span>
+            <span class="skill-tag-pill">WORDPRESS</span>
+            <span class="skill-tag-pill">GOOGLE MERCHANT</span>
+            <span class="skill-tag-pill">SEO OPTIMIZATION</span>
+            <span class="skill-tag-pill">CUSTOM THEMES</span>
+          </div>
+        </div>
+
+        <!-- Core Business Domains -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon">🏢</div>
+            <div class="skill-meta">
+              <h4>Business Systems</h4>
+              <span>ERP, CRM, POS & Booking</span>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            ประสบการณ์จริงในระบบระดับองค์กรที่มีความซับซ้อนสูง
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag-pill">ERP PLATFORMS</span>
+            <span class="skill-tag-pill">CRM SOLUTIONS</span>
+            <span class="skill-tag-pill">MULTI-BRANCH POS</span>
+            <span class="skill-tag-pill">BOOKING PLATFORMS</span>
+            <span class="skill-tag-pill">PAYROLL ENGINE</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Projects Showcase (Portfolio) -->
-  <section id="projects">
+  <!-- Featured Projects Showcase (Portfolio - หน้าเต็ม โชว์ภาพ + รายละเอียด) -->
+  <section id="portfolio">
     <div class="container">
       <div class="section-header">
         <span class="section-tag" data-i18n="projectTag">Portfolio Showcase</span>
-        <h2 class="section-title" data-i18n="projectTitle">ผลงานระบบจริงที่พัฒนาขึ้น</h2>
-        <p class="section-subtitle" data-i18n="projectSubtitle">คลิกดูภาพสกรีนช็อตแบบเต็มทุกหน้า พร้อมรายละเอียดการออกแบบระบบ</p>
+        <h2 class="section-title" data-i18n="projectTitle">ผลงานระบบจริงแบบละเอียด (Portfolio)</h2>
+        <p class="section-subtitle" data-i18n="projectSubtitle">นำเสนอภาพตัวอย่างสกรีนช็อตทุกหน้า พร้อมรายละเอียดการออกแบบและฟังก์ชันการทำงาน</p>
       </div>
 
       <!-- Filter Controls -->
       <div class="projects-filter">
-        <button class="filter-btn active" data-filter="all" data-i18n="filterAll">ทั้งหมด (6)</button>
+        <button class="filter-btn active" data-filter="all" data-i18n="filterAll">ทั้งหมด (6 โปรเจกต์)</button>
         <button class="filter-btn" data-filter="erp" data-i18n="filterErp">ERP & Enterprise</button>
         <button class="filter-btn" data-filter="hr" data-i18n="filterHr">HR & Internal Tools</button>
         <button class="filter-btn" data-filter="ecommerce" data-i18n="filterEcommerce">E-Commerce & Store</button>
@@ -429,60 +544,8 @@
         <button class="filter-btn" data-filter="agency" data-i18n="filterAgency">Web Agency</button>
       </div>
 
-      <!-- Projects Grid (Injected via JS) -->
-      <div class="projects-grid" id="projectsGrid"></div>
-    </div>
-  </section>
-
-  <!-- Full-Stack Capabilities Highlights -->
-  <section id="capabilities" style="background: rgba(15, 23, 42, 0.4);">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-i18n="capTag">Why Hire Me</span>
-        <h2 class="section-title" data-i18n="capTitle">จุดเด่นในฐานะ Full-Stack Developer</h2>
-        <p class="section-subtitle" data-i18n="capSubtitle">สิ่งที่ทำให้ผมสามารถสร้างคุณค่าให้กับทีมและองค์กรของคุณได้ทันที</p>
-      </div>
-
-      <div class="capabilities-grid">
-        <div class="capability-card">
-          <div class="cap-icon">🧩</div>
-          <h3>ความเข้าใจ Business Logic เชิงลึก</h3>
-          <p>
-            ไม่ได้เขียนเฉพาะโค้ดตามสั่ง แต่เข้าใจความต้องการของธุรกิจ ทั้งระบบคำนวณเงินเดือน ภาษี การจัดการยอดขาย และการบริหารสต็อกที่มีความซับซ้อน
-          </p>
-          <ul class="cap-features">
-            <li>คำนวณ Payroll & สถิติวันลาพนักงานอย่างแม่นยำ</li>
-            <li>วิเคราะห์รายรับ-รายจ่ายและแจ้งเตือนสินค้าขาดสต็อก</li>
-            <li>คำนวณและล็อกเรทอัตราแลกเปลี่ยนเงินตราต่างประเทศ</li>
-          </ul>
-        </div>
-
-        <div class="capability-card">
-          <div class="cap-icon">🛡️</div>
-          <h3>ความปลอดภัยและสิทธิ์การเข้าถึง</h3>
-          <p>
-            ให้ความสำคัญกับการควบคุมสิทธิ์ (Role-Based Access Control) เพื่อป้องกันข้อมูลสำคัญรั่วไหล และรักษาความถูกต้องของข้อมูลทุกรายการ
-          </p>
-          <ul class="cap-features">
-            <li>ระบบแยกระดับสิทธิ์ Admin, HR, Manager, Staff</li>
-            <li>การตรวจสอบข้อมูลก่อนบันทึก (Validation) ทั้งฝั่ง Client & Server</li>
-            <li>เก็บบันทึกประวัติการทำรายการ (Audit Logging)</li>
-          </ul>
-        </div>
-
-        <div class="capability-card">
-          <div class="cap-icon">⚡</div>
-          <h3>UI ที่เป็นมิตรและตอบโจทย์การทำงาน</h3>
-          <p>
-            พัฒนาอินเทอร์เฟซที่ใช้งานง่าย ไม่ซับซ้อน ช่วยลดระยะเวลาในการทำงานของทีมงานในองค์กร และเพิ่ม Conversion ให้กับผู้ใช้งานภายนอก
-          </p>
-          <ul class="cap-features">
-            <li>รองรับทุกขนาดหน้าจอ (Desktop, Tablet, Mobile)</li>
-            <li>ตารางข้อมูลค้นหา กรอง และส่งออก Excel/PDF ได้สะดวก</li>
-            <li>กราฟสถิติที่ช่วยให้ผู้บริหารเห็นภาพรวมได้ในหน้าเดียว</li>
-          </ul>
-        </div>
-      </div>
+      <!-- Full-View Projects Container (Injected via JS) -->
+      <div class="projects-full-container" id="projectsFullContainer"></div>
     </div>
   </section>
 
@@ -525,6 +588,16 @@
               </div>
             </div>
             <button class="btn btn-secondary btn-sm" onclick="copyPhone()">คัดลอก</button>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-method-left">
+              <div class="contact-icon">🐙</div>
+              <div class="contact-text">
+                <label>GitHub Profile</label>
+                <a href="https://github.com/nonin22222" target="_blank" rel="noopener"><strong>github.com/nonin22222</strong></a>
+              </div>
+            </div>
           </div>
 
           <div class="contact-method">
@@ -580,14 +653,16 @@
     <div class="container footer-content">
       <div class="footer-left">
         <p>
-          <strong>Natthanon Sonsawan</strong> &copy; 2026. <span data-i18n="footerRights">สงวนลิขสิทธิ์ ออกแบบและพัฒนาเพื่อนำเสนอผลงานบน GitHub Pages</span>
+          <strong>ณัฏฐนนท์ ศรสวรรค์ (นนท์)</strong> &copy; 2026. <span data-i18n="footerRights">สงวนลิขสิทธิ์ ออกแบบและพัฒนาสำหรับสมัครงานตำแหน่ง Full-Stack Developer</span>
         </p>
       </div>
       <ul class="footer-nav">
         <li><a href="#hero">หน้าแรก</a></li>
         <li><a href="#about" data-i18n="navAbout">เกี่ยวกับฉัน</a></li>
+        <li><a href="#experience" data-i18n="navExp">ประสบการณ์ทำงาน</a></li>
+        <li><a href="#education" data-i18n="navEdu">การศึกษา</a></li>
         <li><a href="#skills" data-i18n="navSkills">ทักษะ</a></li>
-        <li><a href="#projects" data-i18n="navProjects">ผลงาน</a></li>
+        <li><a href="#portfolio" data-i18n="navProjects">ผลงาน</a></li>
         <li><a href="#contact" data-i18n="navContact">ติดต่อ</a></li>
       </ul>
     </div>
