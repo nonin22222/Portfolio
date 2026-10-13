@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natthanon Sonsawan | Full-Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Natthanon Sonsawan - Full-Stack Developer & Software Engineer. Production-tested systems in ERP, HR & Payroll, E-Commerce, and FinTech platforms." />
+  <meta name="author" content="Natthanon Sonsawan (ณัฏฐนนท์ ศรสวรรค์)" />
+
+  <!-- Open Graph / Meta for Social & Recruiters -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Natthanon Sonsawan | Full-Stack Developer" />
+  <meta property="og:description" content="Enterprise ERP, HR & Payroll Systems, E-Commerce and FinTech Architectures by Natthanon Sonsawan." />
+  <meta property="og:image" content="./me/profile_portrait.jpg" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Prompt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Animated Lighting -->
+  <div class="bg-ambient">
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+    <div class="ambient-blob blob-3"></div>
+  </div>
+  <div class="bg-grid"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-dot"></span>
+        <span>Natthanon<span class="text-gradient">.dev</span></span>
+        <span class="brand-tag">Available</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about" class="nav-link" data-i18n="navAbout">เกี่ยวกับฉัน</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="navSkills">ทักษะ & เทคโนโลยี</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="navProjects">ผลงานที่พัฒนา</a></li>
+        <li><a href="#capabilities" class="nav-link" data-i18n="navCapabilities">ความเชี่ยวชาญ</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="navContact">ติดต่อ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <button id="langToggleBtn" class="btn-icon btn-lang" title="Switch Language">EN</button>
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="btn-icon" title="Toggle Theme">☀️</button>
+        <!-- Mobile Toggle -->
+        <button id="mobileToggle" class="btn-icon mobile-toggle" title="Menu">☰</button>
+        <!-- Quick CTA -->
+        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="btnContact">ติดต่อ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge-wrap">
+          <span class="badge badge-emerald">
+            <span class="brand-dot"></span>
+            <span data-i18n="heroBadge">พร้อมเริ่มงานทันที</span>
+          </span>
+          <span class="badge">Full-Stack Developer</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="text-gradient" data-i18n="heroTitle">ณัฏฐนนท์ ศรสวรรค์</span>
+        </h1>
+
+        <div class="hero-role">
+          <span>⚡</span>
+          <span data-i18n="heroRole">Full-Stack Developer & Software Engineer</span>
+        </div>
+
+        <p class="hero-description" data-i18n="heroDesc">
+          เชี่ยวชาญการออกแบบและพัฒนาระบบระดับองค์กร (ERP), ระบบบริหารงานบุคคล (HRM & Payroll), เว็บสโตร์ E-Commerce และแพลตฟอร์ม FinTech ที่ต้องการความแม่นยำ ปลอดภัย และรองรับผู้ใช้งานจริง
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" data-i18n="btnProjects">
+            <span>ดูผลงานจริงทั้งหมด</span>
+            <span>↓</span>
+          </a>
+          <button class="btn btn-secondary" onclick="copyEmail()">
+            <span>✉️</span>
+            <span data-i18n="btnCopyEmail">คัดลอกอีเมล</span>
+          </button>
+          <a href="#contact" class="btn btn-outline" data-i18n="btnContact">ติดต่อเพื่อเริ่มงาน</a>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>6+</h3>
+            <p data-i18n="stat1Label">ระบบโปรดักชันจริง</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p data-i18n="stat2Label">Full-Stack Lifecycle</p>
+          </div>
+          <div class="stat-item">
+            <h3>ERP / HR</h3>
+            <p data-i18n="stat3Label">Core Business Platforms</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual / Photo Card -->
+      <div class="hero-visual">
+        <div class="avatar-card">
+          <!-- Photo Switcher Tabs -->
+          <div class="avatar-photo-switch">
+            <button class="photo-tab-btn active" data-photo="studio" data-i18n="photoTabStudio">โปรไฟล์</button>
+            <button class="photo-tab-btn" data-photo="formal" data-i18n="photoTabFormal">รูปติดบัตร</button>
+            <button class="photo-tab-btn" data-photo="casual" data-i18n="photoTabCasual">กิจกรรม</button>
+          </div>
+
+          <div class="avatar-image-wrap">
+            <img src="./me/profile_portrait.jpg" alt="Natthanon Sonsawan - Full-Stack Developer" id="heroAvatarImg" class="avatar-img" />
+          </div>
+
+          <div class="avatar-meta">
+            <div class="avatar-meta-header">
+              <span class="avatar-name">Natthanon Sonsawan</span>
+              <span class="avatar-tag">● Open to Work</span>
+            </div>
+            <div class="avatar-details">
+              <div class="avatar-detail-row">
+                <span>💼</span>
+                <span>Software Engineer / Full-Stack</span>
+              </div>
+              <div class="avatar-detail-row">
+                <span>📍</span>
+                <span>Chiang Mai, Thailand</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="float-card float-card-1">
+            <div class="float-icon icon-erp">⚙️</div>
+            <div class="float-text">
+              <h5>ERP & HRM</h5>
+              <p>Business Automation</p>
+            </div>
+          </div>
+
+          <div class="float-card float-card-2">
+            <div class="float-icon icon-fullstack">💻</div>
+            <div class="float-text">
+              <h5>Full-Stack Dev</h5>
+              <p>Frontend + Backend + DB</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="aboutTag">About Me</span>
+        <h2 class="section-title" data-i18n="aboutTitle">มุ่งมั่นสร้างซอฟต์แวร์ที่ตอบโจทย์ธุรกิจจริง</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Personal Contact Card -->
+        <div class="about-card-left">
+          <h3>Personal Details</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">ข้อมูลส่วนตัวและการติดต่อ</p>
+
+          <div class="about-info-list">
+            <div class="info-item">
+              <div class="info-icon">👤</div>
+              <div class="info-content">
+                <label data-i18n="infoName">ชื่อ-นามสกุล</label>
+                <span>นายณัฏฐนนท์ ศรสวรรค์ (นน / Nonin)</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">💻</div>
+              <div class="info-content">
+                <label data-i18n="infoRole">ตำแหน่งที่เปิดรับ</label>
+                <span class="text-gradient">Full-Stack Developer / Software Engineer</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">✉️</div>
+              <div class="info-content">
+                <label data-i18n="infoEmail">อีเมล</label>
+                <span>nonin31313@gmail.com</span>
+                <button class="copy-btn-inline" onclick="copyEmail()" title="คัดลอกอีเมล">Copy</button>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📞</div>
+              <div class="info-content">
+                <label data-i18n="infoPhone">เบอร์โทรศัพท์</label>
+                <a href="tel:0910798390">091-079-8390</a>
+                <button class="copy-btn-inline" onclick="copyPhone()" title="คัดลอกเบอร์โทรศัพท์">Copy</button>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div class="info-content">
+                <label data-i18n="infoLocation">ที่อยู่ / รูปแบบการทำงาน</label>
+                <span data-i18n="infoLocationVal">เชียงใหม่, ประเทศไทย (พร้อม On-site / Remote)</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">🚀</div>
+              <div class="info-content">
+                <label data-i18n="infoStatus">สถานะการทำงาน</label>
+                <span style="color: var(--accent-tertiary);" data-i18n="infoStatusVal">พร้อมเริ่มงานทันที (Ready to hire)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Biography and Principles -->
+        <div class="about-content-right">
+          <p class="about-text" data-i18n="aboutDesc1">
+            สวัสดีครับ ผม ณัฏฐนนท์ ศรสวรรค์ (นน) นักพัฒนา Full-Stack Developer ที่มีประสบการณ์ทำงานจริงในการสร้างระบบซอฟต์แวร์ระดับ Core Business ให้กับหลากหลายองค์กร ไม่ว่าจะเป็นระบบ ERP สำหรับคลังสินค้าและจัดซื้อ, ระบบ HRM คำนวณเงินเดือนและภาษี, ไปจนถึง E-Commerce และระบบแลกเปลี่ยนเงินตรา
+          </p>
+          <p class="about-text" data-i18n="aboutDesc2">
+            ผมให้ความสำคัญทั้งความถูกต้องของ Business Logic, ความปลอดภัยของฐานข้อมูล, ประสิทธิภาพในการประมวลผลข้อมูลปริมาณมาก และการส่งมอบ UI ที่ผู้ใช้งานทำงานได้อย่างลื่นไหล รวดเร็ว และไม่มีข้อผิดพลาด
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-box">
+              <h4><span>🎯</span> <span>Complex Business Logic</span></h4>
+              <p>เข้าใจกระบวนการทำงานจริง เช่น การคำนวณเงินเดือน วันลา ภาษี และต้นทุนสินค้า</p>
+            </div>
+            <div class="highlight-box">
+              <h4><span>⚡</span> <span>End-to-End Delivery</span></h4>
+              <p>สร้างได้ตั้งแต่ Database Schema, API Backend ไปจนถึง UI Frontend ที่ตอบสนองลื่นไหล</p>
+            </div>
+            <div class="highlight-box">
+              <h4><span>🔒</span> <span>Security & RBAC</span></h4>
+              <p>ควบคุมสิทธิ์การเข้าถึงข้อมูลตามบทบาทผู้ใช้ (Admin, Manager, Employee, Merchant)</p>
+            </div>
+            <div class="highlight-box">
+              <h4><span>📊</span> <span>Analytics & Reports</span></h4>
+              <p>สร้างแดชบอร์ดสรุปยอดขาย กราฟวิเคราะห์ และระบบ Export เอกสาร Excel/PDF</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Tech Stack Matrix -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="skillTag">Tech Stack</span>
+        <h2 class="section-title" data-i18n="skillTitle">ทักษะและความสามารถทางเทคนิค</h2>
+        <p class="section-subtitle" data-i18n="skillSubtitle">เครื่องมือและเทคโนโลยีที่ใช้จริงในการสร้างสรรค์ระบบงานคุณภาพ</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon">🎨</div>
+            <div class="skill-meta">
+              <h4>Frontend Development</h4>
+              <span>UI / UX & Interactive Web</span>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            สร้างเว็บอินเทอร์เฟซที่ทันสมัย ตอบสนองทุกขนาดหน้าจอ โหลดรวดเร็ว และใช้งานง่าย
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag-pill">HTML5</span>
+            <span class="skill-tag-pill">Modern CSS3</span>
+            <span class="skill-tag-pill">JavaScript ES6+</span>
+            <span class="skill-tag-pill">Responsive Design</span>
+            <span class="skill-tag-pill">Highcharts / Chart.js</span>
+            <span class="skill-tag-pill">Glassmorphism UI</span>
+          </div>
+        </div>
+
+        <!-- Backend & APIs -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon">⚙️</div>
+            <div class="skill-meta">
+              <h4>Backend & APIs</h4>
+              <span>Server-Side & Business Logic</span>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            ออกแบบ RESTful API ที่เสถียร เชื่อมต่อฐานข้อมูล ปลอดภัย และจัดการสิทธิ์ผู้ใช้งาน
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag-pill">RESTful APIs</span>
+            <span class="skill-tag-pill">Node.js / Express</span>
+            <span class="skill-tag-pill">PHP / MVC</span>
+            <span class="skill-tag-pill">Authentication & Session</span>
+            <span class="skill-tag-pill">RBAC Permissions</span>
+            <span class="skill-tag-pill">Business Calculation Engine</span>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon">🗄️</div>
+            <div class="skill-meta">
+              <h4>Database & Storage</h4>
+              <span>Data Modeling & Queries</span>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            ออกแบบตารางฐานข้อมูลเชิงสัมพันธ์ ทำ Indexing ดูแลความสมบูรณ์ของข้อมูลธุรกรรม
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag-pill">MySQL</span>
+            <span class="skill-tag-pill">PostgreSQL</span>
+            <span class="skill-tag-pill">Relational Schema Design</span>
+            <span class="skill-tag-pill">Query Optimization</span>
+            <span class="skill-tag-pill">Transactions & Locking</span>
+            <span class="skill-tag-pill">Data Integrity</span>
+          </div>
+        </div>
+
+        <!-- Enterprise Systems -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon">🏢</div>
+            <div class="skill-meta">
+              <h4>Enterprise Architectures</h4>
+              <span>ERP, HRM & E-Commerce</span>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            ความเข้าใจกระบวนการทำงานระดับองค์กร ทั้งบัญชีเงินเดือน คลังสินค้า และคำสั่งซื้อ
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag-pill">ERP Multi-Branch</span>
+            <span class="skill-tag-pill">HRM Clock-in/out</span>
+            <span class="skill-tag-pill">Automated Payroll</span>
+            <span class="skill-tag-pill">Multi-Vendor Cart</span>
+            <span class="skill-tag-pill">Inventory Tracking</span>
+            <span class="skill-tag-pill">Excel & PDF Generator</span>
+          </div>
+        </div>
+
+        <!-- Tools & Deployment -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon">🚀</div>
+            <div class="skill-meta">
+              <h4>DevOps & Tools</h4>
+              <span>Version Control & Hosting</span>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            การบริหารจัดการซอร์สโค้ด การ Deploy ขึ้นเซิร์ฟเวอร์ และการทำงานเป็นทีม
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag-pill">Git</span>
+            <span class="skill-tag-pill">GitHub</span>
+            <span class="skill-tag-pill">GitHub Pages</span>
+            <span class="skill-tag-pill">Linux / Web Server</span>
+            <span class="skill-tag-pill">API Testing</span>
+            <span class="skill-tag-pill">Responsive QA</span>
+          </div>
+        </div>
+
+        <!-- FinTech & Third-Party APIs -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon">💳</div>
+            <div class="skill-meta">
+              <h4>Integrations & FinTech</h4>
+              <span>Third-Party APIs & Rates</span>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            การเชื่อมต่อระบบภายนอก เช่น อัตราแลกเปลี่ยนเงินตรา โซเชียลมีเดีย และ LINE API
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag-pill">Real-time FX Boards</span>
+            <span class="skill-tag-pill">Rate-Lock Booking</span>
+            <span class="skill-tag-pill">LINE Official API</span>
+            <span class="skill-tag-pill">TikTok Video Embed</span>
+            <span class="skill-tag-pill">Payment Flow Handling</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Showcase (Portfolio) -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="projectTag">Portfolio Showcase</span>
+        <h2 class="section-title" data-i18n="projectTitle">ผลงานระบบจริงที่พัฒนาขึ้น</h2>
+        <p class="section-subtitle" data-i18n="projectSubtitle">คลิกดูภาพสกรีนช็อตแบบเต็มทุกหน้า พร้อมรายละเอียดการออกแบบระบบ</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all" data-i18n="filterAll">ทั้งหมด (6)</button>
+        <button class="filter-btn" data-filter="erp" data-i18n="filterErp">ERP & Enterprise</button>
+        <button class="filter-btn" data-filter="hr" data-i18n="filterHr">HR & Internal Tools</button>
+        <button class="filter-btn" data-filter="ecommerce" data-i18n="filterEcommerce">E-Commerce & Store</button>
+        <button class="filter-btn" data-filter="fintech" data-i18n="filterFintech">FinTech & Tools</button>
+        <button class="filter-btn" data-filter="agency" data-i18n="filterAgency">Web Agency</button>
+      </div>
+
+      <!-- Projects Grid (Injected via JS) -->
+      <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Full-Stack Capabilities Highlights -->
+  <section id="capabilities" style="background: rgba(15, 23, 42, 0.4);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="capTag">Why Hire Me</span>
+        <h2 class="section-title" data-i18n="capTitle">จุดเด่นในฐานะ Full-Stack Developer</h2>
+        <p class="section-subtitle" data-i18n="capSubtitle">สิ่งที่ทำให้ผมสามารถสร้างคุณค่าให้กับทีมและองค์กรของคุณได้ทันที</p>
+      </div>
+
+      <div class="capabilities-grid">
+        <div class="capability-card">
+          <div class="cap-icon">🧩</div>
+          <h3>ความเข้าใจ Business Logic เชิงลึก</h3>
+          <p>
+            ไม่ได้เขียนเฉพาะโค้ดตามสั่ง แต่เข้าใจความต้องการของธุรกิจ ทั้งระบบคำนวณเงินเดือน ภาษี การจัดการยอดขาย และการบริหารสต็อกที่มีความซับซ้อน
+          </p>
+          <ul class="cap-features">
+            <li>คำนวณ Payroll & สถิติวันลาพนักงานอย่างแม่นยำ</li>
+            <li>วิเคราะห์รายรับ-รายจ่ายและแจ้งเตือนสินค้าขาดสต็อก</li>
+            <li>คำนวณและล็อกเรทอัตราแลกเปลี่ยนเงินตราต่างประเทศ</li>
+          </ul>
+        </div>
+
+        <div class="capability-card">
+          <div class="cap-icon">🛡️</div>
+          <h3>ความปลอดภัยและสิทธิ์การเข้าถึง</h3>
+          <p>
+            ให้ความสำคัญกับการควบคุมสิทธิ์ (Role-Based Access Control) เพื่อป้องกันข้อมูลสำคัญรั่วไหล และรักษาความถูกต้องของข้อมูลทุกรายการ
+          </p>
+          <ul class="cap-features">
+            <li>ระบบแยกระดับสิทธิ์ Admin, HR, Manager, Staff</li>
+            <li>การตรวจสอบข้อมูลก่อนบันทึก (Validation) ทั้งฝั่ง Client & Server</li>
+            <li>เก็บบันทึกประวัติการทำรายการ (Audit Logging)</li>
+          </ul>
+        </div>
+
+        <div class="capability-card">
+          <div class="cap-icon">⚡</div>
+          <h3>UI ที่เป็นมิตรและตอบโจทย์การทำงาน</h3>
+          <p>
+            พัฒนาอินเทอร์เฟซที่ใช้งานง่าย ไม่ซับซ้อน ช่วยลดระยะเวลาในการทำงานของทีมงานในองค์กร และเพิ่ม Conversion ให้กับผู้ใช้งานภายนอก
+          </p>
+          <ul class="cap-features">
+            <li>รองรับทุกขนาดหน้าจอ (Desktop, Tablet, Mobile)</li>
+            <li>ตารางข้อมูลค้นหา กรอง และส่งออก Excel/PDF ได้สะดวก</li>
+            <li>กราฟสถิติที่ช่วยให้ผู้บริหารเห็นภาพรวมได้ในหน้าเดียว</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="contactTag">Get In Touch</span>
+        <h2 class="section-title" data-i18n="contactTitle">พร้อมร่วมงานกับทีมของคุณ</h2>
+        <p class="section-subtitle" data-i18n="contactSubtitle">เปิดรับโอกาสในตำแหน่ง Full-Stack Developer / Software Engineer</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Direct Contact Methods -->
+        <div class="contact-info-card">
+          <div>
+            <h3>ช่องทางการติดต่อโดยตรง</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.4rem;">
+              สามารถติดต่อผ่านอีเมล โทรศัพท์ หรือส่งข้อความผ่านแบบฟอร์มได้ตลอดเวลาครับ
+            </p>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-method-left">
+              <div class="contact-icon">✉️</div>
+              <div class="contact-text">
+                <label>Email Address</label>
+                <strong>nonin31313@gmail.com</strong>
+              </div>
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="copyEmail()">คัดลอก</button>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-method-left">
+              <div class="contact-icon">📞</div>
+              <div class="contact-text">
+                <label>Phone Number</label>
+                <strong>091-079-8390</strong>
+              </div>
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="copyPhone()">คัดลอก</button>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-method-left">
+              <div class="contact-icon">📍</div>
+              <div class="contact-text">
+                <label>Location & Relocation</label>
+                <strong>เชียงใหม่ (พร้อมทำงาน On-site / Remote)</strong>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-subtle); display: flex; gap: 0.75rem;">
+            <a href="mailto:nonin31313@gmail.com" class="btn btn-primary" style="flex: 1;">
+              <span>✉️ ส่งอีเมลทันที</span>
+            </a>
+            <a href="tel:0910798390" class="btn btn-secondary" style="flex: 1;">
+              <span>📞 โทรติดต่อ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="contactName" data-i18n="formName">ชื่อของคุณ</label>
+              <input type="text" id="contactName" class="form-input" placeholder="เช่น ผู้จัดการฝ่ายบุคคล / คุณสมชาย" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail" data-i18n="formEmail">อีเมลติดต่อกลับ</label>
+              <input type="email" id="contactEmail" class="form-input" placeholder="recruiter@company.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage" data-i18n="formMsg">ข้อความหรือรายละเอียดตำแหน่งงาน</label>
+              <textarea id="contactMessage" class="form-textarea" placeholder="ระบุรายละเอียดตำแหน่งงาน บริษัท หรือข้อความที่ต้องการสอบถาม..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" data-i18n="btnSendMsg">
+              <span>ส่งข้อความติดต่อ</span>
+              <span>✉️</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <p>
+          <strong>Natthanon Sonsawan</strong> &copy; 2026. <span data-i18n="footerRights">สงวนลิขสิทธิ์ ออกแบบและพัฒนาเพื่อนำเสนอผลงานบน GitHub Pages</span>
+        </p>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="#hero">หน้าแรก</a></li>
+        <li><a href="#about" data-i18n="navAbout">เกี่ยวกับฉัน</a></li>
+        <li><a href="#skills" data-i18n="navSkills">ทักษะ</a></li>
+        <li><a href="#projects" data-i18n="navProjects">ผลงาน</a></li>
+        <li><a href="#contact" data-i18n="navContact">ติดต่อ</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Interactive Project Lightbox Modal -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modalTitle">Project Title</h3>
+        <button class="modal-close-btn" id="modalCloseBtn" title="Close">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Main Image Stage -->
+        <div class="modal-image-stage">
+          <button class="modal-nav-arrow modal-nav-prev" id="modalPrevBtn" title="Previous Image">&#10094;</button>
+          <img src="" alt="Main Preview" id="modalMainImg" class="modal-main-img" />
+          <button class="modal-nav-arrow modal-nav-next" id="modalNextBtn" title="Next Image">&#10095;</button>
+        </div>
+
+        <!-- Thumbnails Strip -->
+        <div class="modal-thumbs-strip" id="modalThumbs"></div>
+
+        <!-- Details Section -->
+        <div class="modal-details" id="modalDetails"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
