@@ -1,33 +1,43 @@
-# 💼 Natthanon Sonsawan - Full-Stack Developer Portfolio
+# Natthanon Sornsuwan (ณัฏฐนนท์ ศรสุวรรณ) - Full-Stack Developer Portfolio
 
-เว็บไซต์ Portfolio ระดับโปรดักชัน สำหรับนำเสนอผลงานและสมัครงานในตำแหน่ง **Full-Stack Developer / Software Engineer** ออกแบบด้วยเทคโนโลยี Modern Web, Glassmorphism, ระบบสลับภาษา (TH/EN), ธีมสลับสว่าง-มืด (Light/Dark) และรองรับการ Deploy บน **GitHub Pages** ได้ทันทีโดยไม่ต้อง Build เพิ่มเติม
+เว็บไซต์ Portfolio สำหรับนำเสนอผลงานและสมัครงานในตำแหน่ง **Full-Stack Developer / Software Engineer** ออกแบบด้วยเทคโนโลยี Modern Web, Dark Slate Engineering Theme, ระบบสลับภาษา (TH/EN), ธีมสลับสว่าง-มืด (Light/Dark) และรองรับการ Deploy บน **GitHub Pages** ได้ทันทีโดยไม่ต้อง Build เพิ่มเติม
 
 ---
 
-## 🌟 จุดเด่นของเว็บไซต์ (Features)
-1. **GitHub Pages 100% Ready:** ใช้โครงสร้าง Static Web มาตรฐาน อ้างอิง Relative Path ทั้งหมด พร้อมไฟล์ `.nojekyll` รองรับการรันบน `https://<username>.github.io/<repo>/` ได้ทันที
+## จุดเด่นของเว็บไซต์ (Key Highlights)
+1. **GitHub Pages 100% Ready:** โครงสร้างเว็บมาตรฐาน พร้อมไฟล์ `.nojekyll` รองรับการทำงานบน `https://<username>.github.io/<repo>/` ทันที
 2. **ระบบสลับภาษา (Bilingual TH / EN):** เปลี่ยนภาษาได้ทันใจผ่านปุ่มบนแถบนำทาง รองรับทั้ง HR ไทยและบริษัทข้ามชาติ
-3. **Interactive Project Lightbox Modal:** เมื่อคลิกที่การ์ดผลงาน จะเปิดหน้าต่างดูรูปสกรีนช็อตขนาดใหญ่ พร้อมสลับดูรูปต่างๆ ในโปรเจกต์นั้นๆ และอ่านรายละเอียดสถาปัตยกรรมระบบ
-4. **ตัวกรองหมวดหมู่ผลงาน (Filter Tabs):** กรองดูเฉพาะ ERP, HR & Payroll, E-Commerce, FinTech หรือ Web Agency ได้ทันที
-5. **Interactive Photo Switcher:** สลับดูรูปโปรไฟล์ได้ 3 สไตล์ (Studio Portrait, รูปติดบัตรทางการ, รูปกิจกรรม)
-6. **1-Click Copy Contact & Toasts:** คลิกคัดลอกอีเมลหรือเบอร์โทรศัพท์ได้ในคลิกเดียว พร้อมแจ้งเตือน Toast สวยงาม
+3. **Full-View Project Showcase & Chrome Mockup:** นำเสนอภาพตัวอย่างสกรีนช็อตทุกหน้าในกรอบ Browser Window พร้อมสลับแท็บดูแต่ละหน้าและอ่านรายละเอียดโจทย์ทางธุรกิจ/แนวทางแก้ปัญหา
+4. **Interactive Project Lightbox Modal:** ดูรูปสกรีนช็อตขนาดใหญ่เต็มจอพร้อมเลื่อนเปลี่ยนรูปได้อย่างต่อเนื่อง
+5. **ตัวกรองหมวดหมู่ผลงาน (Filter Tabs):** กรองดูเฉพาะ ERP, HR & Payroll, E-Commerce, FinTech หรือ Web Agency ได้ทันที
+6. **1-Click Copy Contact & Toasts:** คัดลอกอีเมลหรือเบอร์โทรศัพท์ได้ในคลิกเดียว พร้อมการแจ้งเตือน Toast
 
 ---
 
-## 📁 โครงสร้างโฟลเดอร์ในโปรเจกต์
+## ข้อมูลผู้พัฒนา (Developer Profile)
+- **ชื่อ-นามสกุล:** นายณัฏฐนนท์ ศรสุวรรณ (นนท์)
+- **English Name:** Natthanon Sornsuwan (Non)
+- **ตำแหน่ง:** Full-Stack Developer / Software Engineer
+- **ประสบการณ์:** เกือบ 4 ปี (Enterprise Business Systems, ERP, POS, HR & Payroll, E-Commerce, Web Scraping)
+- **การศึกษา:** ปริญญาตรี สาขาการพัฒนาซอฟต์แวร์ทางธุรกิจ มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา (RMUTL) — เกียรตินิยม (GPA 3.61)
+- **GitHub:** [github.com/nonin22222](https://github.com/nonin22222)
+- **อีเมล:** nonin31313@gmail.com
+- **โทรศัพท์:** 091-079-8390
+
+---
+
+## โครงสร้างโฟลเดอร์ในโปรเจกต์
 ```
 Portfolio/
 ├── index.html                 # หน้าเว็บหลัก
 ├── .nojekyll                  # ป้องกันปัญหา Jekyll ของ GitHub Pages
 ├── README.md                  # คู่มือโปรเจกต์และการนำขึ้น GitHub Pages
 ├── css/
-│   └── style.css              # ระบบสไตล์ Dark Luxury Tech + Glassmorphism + Responsive
+│   └── style.css              # ระบบสไตล์ Clean Engineer + Responsive
 ├── js/
-│   └── main.js                # ระบบจัดการข้อมูลผลงาน, Modal, Filter, i18n, Theme
+│   └── main.js                # ระบบข้อมูลผลงาน, Modal, Filter, i18n, Theme
 ├── me/                        # ข้อมูลและรูปถ่ายของผู้พัฒนา
-│   ├── profile_portrait.jpg
-│   ├── formal_photo.png
-│   └── casual_photo.jpg
+│   └── profile_portrait.jpg
 └── Portfolio/                 # โฟลเดอร์สกรีนช็อตผลงานจริงทั้ง 6 ระบบ
     ├── erp/                   # iToolMart Enterprise ERP Platform
     ├── hr/                    # Dee.Farm HR & Payroll Platform
@@ -39,27 +49,22 @@ Portfolio/
 
 ---
 
-## 🚀 ขั้นตอนการนำขึ้น GitHub Pages (Step-by-Step Guide)
+## ขั้นตอนการนำขึ้น GitHub Pages (Step-by-Step Guide)
 
 ### วิธีที่ 1: อัปโหลดผ่าน GitHub Desktop หรือ Git CLI
-1. สร้าง New Repository บน [GitHub.com](https://github.com) (เช่น ตั้งชื่อว่า `Portfolio`)
-2. ดันโค้ดทั้งหมดในโฟลเดอร์นี้ขึ้นสู่ GitHub:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial portfolio release for Full-Stack Developer"
-   git branch -M main
-   git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/Portfolio.git
-   git push -u origin main
-   ```
+```bash
+git add .
+git commit -m "Update portfolio for Full-Stack Developer"
+git push origin main
+```
 
 ### วิธีที่ 2: ตั้งค่าเปิดใช้งาน GitHub Pages
-1. เข้าไปที่หน้า Repository บน GitHub
+1. เข้าไปที่หน้า Repository บน GitHub (`https://github.com/nonin22222/Portfolio`)
 2. ไปที่เมนู **Settings** (การตั้งค่า)
 3. เมนูด้านซ้าย เลือกหัวข้อ **Pages**
 4. ในส่วน **Build and deployment**:
    - **Source:** เลือก `Deploy from a branch`
    - **Branch:** เลือก `main` และโฟลเดอร์ `/ (root)`
    - กดปุ่ม **Save**
-5. รอประมาณ 1-2 นาที GitHub จะสร้าง URL เว็บไซต์ของคุณ เช่น:  
-   👉 `https://<YOUR_GITHUB_USERNAME>.github.io/Portfolio/`
+5. รอประมาณ 1-2 นาที GitHub จะเผยแพร่เว็บไซต์ของคุณที่:  
+   👉 `https://nonin22222.github.io/Portfolio/`

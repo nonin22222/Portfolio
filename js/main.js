@@ -1,28 +1,36 @@
 /**
- * NATTHANON SONSAWAN - FULL-STACK DEVELOPER PORTFOLIO
- * Main JavaScript Engine: CV Data, Project Showcase, i18n, Theme, Lightbox
+ * NATTHANON SORNSUWAN - FULL-STACK DEVELOPER
+ * Clean Engineering Portfolio Engine
  */
 
-// Project Data Store with full bilingual content and multiple screenshots
 const PROJECTS_DATA = [
   {
     id: 'erp',
     category: 'erp',
     company: 'D DOT FARM / iToolmart',
     duration: '2 ปี 3 เดือน',
+    role: 'Full-Stack Developer',
     title: {
-      th: 'iToolMart Enterprise ERP, POS & Inventory Platform',
-      en: 'iToolMart Enterprise ERP, POS & Inventory Platform'
+      th: 'iToolMart Enterprise ERP & Multi-Branch Inventory',
+      en: 'iToolMart Enterprise ERP & Multi-Branch Inventory'
     },
     shortDesc: {
-      th: 'ระบบบริหารทรัพยากรองค์กร (ERP) และ POS จัดการยอดขาย สินค้าคงคลังหลายสาขา ระบบจัดซื้อ PO และวิเคราะห์กำไรขาดทุน',
-      en: 'Enterprise ERP & POS platform managing multi-branch inventory, procurement POs, sales ledgers, and profit analytics.'
+      th: 'ระบบบริหารทรัพยากรองค์กร (ERP) ดูแลยอดขาย คลังสินค้าหลายสาขา จัดซื้อ PO และวิเคราะห์กำไรขาดทุน',
+      en: 'Enterprise ERP managing multi-branch inventory, procurement PO workflows, sales audit, and profit margins.'
     },
-    fullDesc: {
-      th: 'พัฒนาระบบ ERP และ POS สำหรับธุรกิจค้าปลีก-ค้าส่งขนาดใหญ่ รวบรวมข้อมูลรายรับ-รายจ่าย ยอดขาย กำไรขาดทุน แสดงผลแดชบอร์ดแบบโต้ตอบด้วย Highcharts จัดการระบบสต็อกแจ้งเตือนสินค้าใกล้หมด (Low Stock Alert) ระบบสร้างใบสั่งซื้อ (PO) ส่งออกเอกสาร Excel/PDF พร้อมการควบคุมสิทธิ์ผู้ใช้แบบเข้มงวด (RBAC)',
-      en: 'Engineered an end-to-end ERP and POS system for large-scale retail & wholesale business. Aggregates multi-branch financials, profit margins into Highcharts dashboards, automated stock alerts, procurement workflows with Excel/PDF exports, and granular RBAC security.'
+    problem: {
+      th: 'ธุรกิจค้าปลีก-ค้าส่งมีสินค้าหลายพันรายการและหลายสาขา จำเป็นต้องมีระบบรวมศูนย์ที่ตัดสต็อกแม่นยำ แจ้งเตือนสินค้าใกล้หมด และคำนวณต้นทุน-กำไรได้ทันทีโดยไม่ต้องรอสรุปสิ้นเดือน',
+      en: 'Wholesale & retail operations with thousands of SKUs required centralized inventory sync, threshold stock alerts, and instant profit-loss computation.'
     },
-    tags: ['Full-Stack', 'PHP', 'MySQL', 'ERP Architecture', 'POS System', 'Highcharts', 'Excel/PDF Export', 'RBAC'],
+    solution: {
+      th: 'ออกแบบฐานข้อมูล MySQL เชื่อมโยงทุกสาขา พัฒนาแดชบอร์ดกราฟ Highcharts แสดงยอดขายและกำไรแบบเรียลไทม์ พร้อมระบบออกเอกสาร PO และ Export ข้อมูลเป็น Excel/PDF',
+      en: 'Architected relational MySQL schema, built responsive Highcharts dashboards for real-time financials, and implemented automated PO generation with Excel/PDF export.'
+    },
+    tags: ['PHP', 'MySQL', 'Node.js', 'ERP Architecture', 'Highcharts', 'Excel/PDF Export', 'RBAC'],
+    imageTitles: {
+      th: ['แดชบอร์ดภาพรวมยอดขาย', 'คลังสินค้า & สต็อก', 'ระบบจัดซื้อ (PO)', 'บันทึกยอดขายรายวัน', 'สถิติการขายแยกสาขา'],
+      en: ['Financial Dashboard', 'Stock & Inventory', 'Procurement (PO)', 'Daily Sales Ledger', 'Branch Analytics']
+    },
     images: [
       './Portfolio/erp/1.png',
       './Portfolio/erp/2.png',
@@ -32,18 +40,18 @@ const PROJECTS_DATA = [
     ],
     features: {
       th: [
-        'แดชบอร์ดสรุปรายรับ-รายจ่าย และยอดขายรวมทุกสาขาแบบเรียลไทม์ พร้อมกราฟ Highcharts',
-        'ระบบบริหารสต็อกคลังสินค้าและการแจ้งเตือนสินค้าใกล้หมด (Low Stock Alert)',
-        'ระบบสร้างและจัดการใบสั่งซื้อ (PO) พร้อมฟิลเตอร์ช่วงเวลาและส่งออก Excel',
-        'ระบบจัดการยอดขายและใบเสร็จ แยกตามพนักงานขายและคลังสาขา',
-        'การควบคุมสิทธิ์ผู้ใช้งาน (Role-Based Access Control) ตามระดับอำนาจ'
+        'แดชบอร์ดสรุปรายรับ-รายจ่าย ยอดซื้อ และกำไรสุทธิ แสดงกราฟ Highcharts รายเดือน',
+        'ระบบบริหารคลังสินค้า ตรวจสอบสินค้าคงเหลือ และแจ้งเตือนเมื่อสต็อกต่ำกว่าเกณฑ์',
+        'ระบบสร้างและจัดการใบสั่งซื้อ (PO) กรองตามช่วงวันที่และส่งออกรายงาน Excel ได้ทันที',
+        'ระบบบันทึกยอดขายและใบเสร็จ แยกตามพนักงานขาย สาขา และประเภทการชำระเงิน',
+        'ระบบกำหนดสิทธิ์การเข้าถึง (Role-Based Access Control) ป้องกันข้อมูลรั่วไหล'
       ],
       en: [
-        'Real-time multi-branch financial & sales analytics dashboard powered by Highcharts',
-        'Multi-warehouse stock inventory with automated low-stock threshold alerts',
-        'PO procurement workflow with custom date-range filtering and Excel export',
-        'Sales and invoice audit tracking sorted by salesperson and warehouse',
-        'Role-Based Access Control (RBAC) across organizational departments'
+        'Real-time financial dashboard with Highcharts monthly income/expense graphs',
+        'Multi-branch inventory tracker with automated low-stock threshold warnings',
+        'Procurement purchase order (PO) workflow with date-range filters and Excel export',
+        'Sales and receipt audit log categorized by salesperson, branch, and payment method',
+        'Granular Role-Based Access Control (RBAC) safeguarding sensitive business data'
       ]
     }
   },
@@ -52,19 +60,28 @@ const PROJECTS_DATA = [
     category: 'hr',
     company: 'D DOT FARM',
     duration: '2 ปี 3 เดือน',
+    role: 'Full-Stack Developer',
     title: {
       th: 'Dee.Farm HR Management & Payroll Platform',
       en: 'Dee.Farm HR Management & Payroll Platform'
     },
     shortDesc: {
-      th: 'แพลตฟอร์มบริหารงานบุคคลครบวงจร ระบบลงเวลาเข้าออกงาน อนุมัติวันลา และคำนวณบัญชีเงินเดือน (Payroll)',
-      en: 'All-in-one Human Resource Management platform with clock-in/out, digital leave approval, and automated payroll.'
+      th: 'ระบบบริหารงานบุคคล บันทึกเวลาเข้า-ออกงาน อนุมัติวันลา และคำนวณบัญชีเงินเดือน (Payroll)',
+      en: 'Human Resource Management system featuring digital attendance, leave workflow, and automated payroll.'
     },
-    fullDesc: {
-      th: 'ระบบบริหารจัดการทรัพยากรบุคคลขององค์กร รองรับการบันทึกเวลาทำงานผ่านระบบออนไลน์ เช็คสถิติการมาสาย ขาดงาน ระบบยื่นขออนุมัติวันลา (ลาป่วย ลากิจ ลาพักร้อน) พร้อมปฏิทินบริษัท ระบบจัดการข้อมูลพนักงาน และระบบบัญชีเงินเดือน (Payroll) คำนวณภาษีอัตโนมัติ',
-      en: 'Enterprise HRM platform featuring web clock-in/out attendance tracking, tardiness analytics, digital leave requests with approval hierarchies, company calendar sync, employee directory, and automated payroll slip & tax computation.'
+    problem: {
+      th: 'การลงเวลาทำงานด้วยกระดาษหรือเครื่องสแกนเดิมคำนวณสถิติการมาสาย วันลาคงเหลือ และเงินเดือนพนักงานได้ล่าช้าและเกิดข้อผิดพลาดง่าย',
+      en: 'Manual punch cards and offline attendance tracking caused discrepancies in leave quotas and delayed monthly payroll calculations.'
     },
-    tags: ['Full-Stack', 'Vue.js', 'Node.js', 'MySQL', 'HRM System', 'Payroll Engine', 'Attendance Tracking', 'Calendar Sync'],
+    solution: {
+      th: 'พัฒนาระบบ Web Clock-in/Clock-out บันทึกเวลาออนไลน์พร้อมคำนวณสถิติสาย-ขาด-ลาอัตโนมัติ เชื่อมโยงเข้าสู่ระบบคำนวณเงินเดือน (Payroll) และออกสลิปเงินเดือน',
+      en: 'Built web-based clock-in/out attendance tracking, automated leave requests with approval hierarchies, and payroll slip computation.'
+    },
+    tags: ['Vue.js', 'PHP', 'Node.js', 'MySQL', 'HRM', 'Payroll Engine', 'Calendar Integration'],
+    imageTitles: {
+      th: ['แดชบอร์ดลงเวลาทำงาน', 'ประวัติพนักงาน & สิทธิ์ลา', 'บัญชีเงินเดือน (Payroll)', 'ระบบจัดการคำขอลา'],
+      en: ['Attendance Dashboard', 'Employee Master & Leave', 'Payroll Ledger', 'Leave Request Manager']
+    },
     images: [
       './Portfolio/hr/1.png',
       './Portfolio/hr/2.png',
@@ -73,14 +90,14 @@ const PROJECTS_DATA = [
     ],
     features: {
       th: [
-        'แดชบอร์ดพนักงานส่วนบุคคล: ลงเวลาเข้างาน, เลิกงาน, สถิติการมาสาย และวันลาคงเหลือ',
-        'ระบบยื่นคำร้องขอลา (ลาป่วย, ลากิจ, ลาพักร้อน) พร้อมเหตุผลและสถานะอนุมัติ',
-        'ระบบบัญชีเงินเดือน (Payroll) แสดงรายการจ่าย ย้อนหลัง และดาวน์โหลดสลิปเงินเดือน',
-        'ระบบจัดการประวัติพนักงาน เอกสารแนบ ประวัติการศึกษา และข้อมูลบัญชีธนาคาร',
-        'ปฏิทินองค์กรแสดงวันหยุดประจำปีและกำหนดการวันหยุดสำคัญ'
+        'แดชบอร์ดพนักงานส่วนบุคคล: ปุ่มลงเวลาเข้างาน-เลิกงาน และแสดงโควตาวันลาคงเหลือ',
+        'ระบบยื่นคำขอลา (ลาป่วย, ลากิจ, ลาพักร้อน) พร้อมระบุเหตุผลและสถานะการอนุมัติ',
+        'ระบบบัญชีเงินเดือน (Payroll) แสดงประวัติการจ่ายเงินย้อนหลัง และออกสลิปเงินเดือน',
+        'ระบบจัดการประวัติพนักงาน ข้อมูลติดต่อฉุกเฉิน บัญชีธนาคาร และประวัติการศึกษา',
+        'ปฏิทินบริษัทแสดงวันหยุดตามประเพณีและกำหนดการสำคัญขององค์กร'
       ],
       en: [
-        'Personal employee portal: Clock in/out, remaining quota, tardiness logs',
+        'Personal employee portal: 1-click clock in/out, remaining quota, tardiness logs',
         'Digital leave management workflow (Sick, Personal, Vacation) with manager approvals',
         'Comprehensive payroll ledger with payment receipts and exportable slips',
         'Employee master file repository including emergency contacts and banking data',
@@ -93,19 +110,28 @@ const PROJECTS_DATA = [
     category: 'ecommerce',
     company: 'D DOT FARM / iToolmart',
     duration: '2 ปี 3 เดือน',
+    role: 'Full-Stack Developer',
     title: {
       th: 'iToolMart E-Commerce Platform & Community',
       en: 'iToolMart E-Commerce Platform & Community'
     },
     shortDesc: {
-      th: 'เว็บสโตร์ค้าปลีกเครื่องมือช่างและอุปกรณ์อุตสาหกรรม แคตตาล็อกแบรนด์ A-Z คูปองโปรโมชั่น และวิดีโอ TikTok',
-      en: 'Large-scale industrial tool e-commerce platform with dynamic brand filters, promo vouchers, and TikTok video feeds.'
+      th: 'เว็บสโตร์ค้าปลีกเครื่องมือช่างและอุปกรณ์อุตสาหกรรม ค้นหาแบรนด์ A-Z คูปองโปรโมชั่น และวิดีโอ TikTok',
+      en: 'Industrial tool e-commerce storefront with A-Z brand directory, promotion vouchers, and TikTok video feeds.'
     },
-    fullDesc: {
-      th: 'ร้านค้าออนไลน์สินค้าอุตสาหกรรมและเครื่องมือช่างชั้นนำ รองรับแคตตาล็อกสินค้าขนาดใหญ่ การจัดหมวดหมู่แบรนด์ A-Z ค้นหาแบบทันใจ ระบบคูปองส่งฟรีและโปรโมชั่นส่วนลด พร้อมการเชื่อมโยงคอนเทนต์วิดีโอ TikTok จากหน้าร้านสาขา และบล็อกบทความรีวิวเครื่องมือ',
-      en: 'Modern e-commerce platform built for professional tool retail. Features responsive mega-menus, alphabetical brand index, instant keyword search, promotional discount voucher engine, branch TikTok feed embeds, and engineering blog community.'
+    problem: {
+      th: 'สินค้าอุปกรณ์ช่างมีหลายหมวดหมู่และสเปกซับซ้อน ผู้ใช้ค้นหาแบรนด์และอะไหล่ยาก ต้องการระบบแคตตาล็อกที่โหลดไวและเชื่อมต่อโซเชียลมีเดีย',
+      en: 'Specialized industrial tools required intuitive navigation for complex technical specs, fast brand filtering, and social proof integration.'
     },
-    tags: ['E-Commerce', 'Frontend Architecture', 'Vue.js / Nuxt', 'Brand Index A-Z', 'Coupon Engine', 'TikTok Embed', 'UI/UX'],
+    solution: {
+      th: 'พัฒนา Front-End ด้วยสถาปัตยกรรม Component-driven สร้างระบบค้นหาแบรนด์ A-Z แบบทันใจ ระบบคูปองส่วนลด และเชื่อมต่อวิดีโอ TikTok จากหน้าร้านสาขา',
+      en: 'Engineered responsive component architecture featuring instant A-Z brand filtering, promo code engine, and regional TikTok video embeds.'
+    },
+    tags: ['Vue.js', 'PHP', 'Tailwind / CSS', 'E-Commerce', 'TikTok Embed', 'Brand Index A-Z'],
+    imageTitles: {
+      th: ['หน้าแรก & หมวดหมู่เครื่องมือ', 'บทความรีวิว & วิดีโอ TikTok', 'หน้ารวมแบรนด์ & คูปองส่งฟรี', 'การแสดงผลสินค้า', 'แคตตาล็อกอุปกรณ์'],
+      en: ['Storefront & Categories', 'Review Articles & TikTok', 'Brand Index & Coupons', 'Product Showcase', 'Hardware Catalogue']
+    },
     images: [
       './Portfolio/itool/1.png',
       './Portfolio/itool/2.png',
@@ -115,18 +141,18 @@ const PROJECTS_DATA = [
     ],
     features: {
       th: [
-        'แคตตาล็อกสินค้าอัจฉริยะ ค้นหาและจัดกลุ่มหมวดหมู่อุปกรณ์ช่างหลากหลายสเปก',
-        'ดัชนีแบรนด์ A-Z ช่วยให้ลูกค้าค้นหาแบรนด์ยอดนิยมได้อย่างรวดเร็ว',
-        'ระบบคูปองส่งฟรีและส่วนลดคำนวณตามเงื่อนไขยอดซื้อ',
-        'ระบบเชื่อมโยงสื่อวิดีโอ TikTok จากสาขา เพิ่มยอดขายและความน่าเชื่อถือ',
-        'ระบบคอมมูนิตี้และบทความรีวิวเทคนิคช่าง ช่วยขับเคลื่อน SEO'
+        'ระบบแคตตาล็อกสินค้าขนาดใหญ่ แยกตามหมวดหมู่อุปกรณ์ช่างและงานอุตสาหกรรม',
+        'ดัชนีแบรนด์ A-Z ช่วยให้ลูกค้าค้นหาและเข้าถึงแบรนด์ที่ต้องการได้อย่างรวดเร็ว',
+        'ระบบคูปองส่งฟรีและโปรโมชั่นส่วนลดตามเงื่อนไขยอดซื้อ',
+        'เชื่อมต่อฟีดวิดีโอสั้น TikTok จากสาขา เพิ่มความน่าเชื่อถือและการตัดสินใจซื้อ',
+        'ระบบบทความรีวิวเครื่องมือช่าง ช่วยผลักดัน Organic Search และ SEO'
       ],
       en: [
-        'Extensive product categorization tailored for complex hardware specifications',
+        'Comprehensive product catalogue categorized by tool type and industrial application',
         'Alphabetical (A-Z) brand directory with instant multi-filter browsing',
         'Tiered promotion coupon engine (Free shipping, minimum spend discounts)',
         'Live social commerce integration embedding regional TikTok videos',
-        'Integrated knowledge base & review articles optimizing organic SEO'
+        'Integrated engineering blog and knowledge base boosting organic SEO rankings'
       ]
     }
   },
@@ -135,19 +161,28 @@ const PROJECTS_DATA = [
     category: 'fintech',
     company: 'FinTech Solution / Central Chiang Rai',
     duration: 'Production System',
+    role: 'Full-Stack Developer',
     title: {
       th: 'Super Exchange Chiang Rai — Live FX & Rate Locking',
       en: 'Super Exchange Chiang Rai — Live FX & Rate Locking'
     },
     shortDesc: {
       th: 'แพลตฟอร์มแลกเปลี่ยนเงินตราต่างประเทศ บอร์ดเรทเรียลไทม์ และระบบจองล็อกเรทออนไลน์ล่วงหน้า',
-      en: 'FinTech currency exchange web service featuring real-time FX rate boards and rate-locking booking.'
+      en: 'Foreign currency exchange platform featuring real-time FX rate boards and rate-locking reservation.'
     },
-    fullDesc: {
-      th: 'เว็บแอปพลิเคชันบริการแลกเปลี่ยนเงินตราต่างประเทศสาขาเซ็นทรัล เชียงราย แสดงกระดานอัตราแลกเปลี่ยนสกุลเงินหลักทั่วโลก (USD, EUR, JPY, GBP, CNY, SGD ฯลฯ) พร้อมเครื่องคำนวณเงินตรา ระบบเปิดจองล็อกเรทล่วงหน้าเพื่อคุ้มครองความผันผวน และเชื่อมต่อ Official LINE Chat สำหรับลูกค้า',
-      en: 'Foreign currency exchange web app serving Central Chiang Rai. Features live rate boards for global currencies (USD, EUR, JPY, GBP, CNY, SGD), interactive FX conversion calculator, branch reservation booking with rate-locking, and LINE Official API integration.'
+    problem: {
+      th: 'อัตราแลกเปลี่ยนเงินตราต่างประเทศมีความผันผวนตลอดวัน ลูกค้าต้องการทราบเรทที่แน่นอนก่อนเดินทางมาที่สาขา และต้องการล็อกเรทไว้ล่วงหน้า',
+      en: 'Fluctuating FX rates created uncertainty for travelers. Customers needed real-time rate verification and guaranteed rate locking before branch visits.'
     },
-    tags: ['FinTech', 'Real-Time FX Board', 'Rate Lock Booking', 'Calculator Tool', 'LINE API', 'Responsive UI'],
+    solution: {
+      th: 'พัฒนากระดานอัตราแลกเปลี่ยนแบบ Real-Time แสดงค่าซื้อ-ขาย เครื่องคำนวณแปลงสกุลเงินสองทาง และระบบจองล็อกเรทล่วงหน้าพร้อมเชื่อมต่อ LINE Official',
+      en: 'Built live FX ticker boards, bi-directional currency calculator, and online reservation booking with rate-locking and LINE API integration.'
+    },
+    tags: ['JavaScript', 'PHP', 'FinTech', 'Real-Time FX', 'Rate Lock Booking', 'LINE API'],
+    imageTitles: {
+      th: ['กระดานเรทเงินตราต่างประเทศ', 'โมดอลคำนวณ & ฟอร์มจองล็อกเรท', 'ตารางเรทสกุลเงินหลัก', 'ข้อมูลสาขาเซ็นทรัล เชียงราย', 'รายละเอียดเงื่อนไขการจอง'],
+      en: ['Live Currency Rate Board', 'Rate Calculator & Booking', 'Major Currencies Table', 'Branch Location & Hours', 'Booking Terms & Validation']
+    },
     images: [
       './Portfolio/superexchangechiangrai/1.png',
       './Portfolio/superexchangechiangrai/2.png',
@@ -157,18 +192,18 @@ const PROJECTS_DATA = [
     ],
     features: {
       th: [
-        'กระดานอัตราแลกเปลี่ยนเงินตราต่างประเทศแบบเรียลไทม์ อัปเดตเรทซื้อ-ขายแม่นยำ',
-        'เครื่องคำนวณแปลงค่าเงินสองทิศทาง (ต้องการซื้อ / ต้องการขาย)',
-        'ระบบจองและล็อกเรทล่วงหน้า (Lock Rate) พร้อมโมดอลฟอร์มระบุสาขาและเบอร์ติดต่อ',
-        'ระบบแจ้งเตือนเงื่อนไขธุรกรรมและสถานะเวลาทำการของสาขา',
-        'ปุ่มติดต่อด่วนผ่าน LINE Official Account เพิ่มอัตราการปิดการจอง'
+        'กระดานแสดงอัตราแลกเปลี่ยนเงินตราสกุลหลักทั่วโลก (USD, EUR, JPY, GBP, CNY, SGD ฯลฯ)',
+        'เครื่องคำนวณแปลงค่าเงินสองทิศทาง (ต้องการซื้อ / ต้องการขาย) แบบคำนวณทันที',
+        'ระบบเปิดจองล็อกเรทล่วงหน้า (Lock Rate) พร้อมระบุสาขาและเบอร์ติดต่อ',
+        'ระบบตรวจสอบเงื่อนไขเวลาทำการของสาขาและแจ้งเตือนสถานะการเปิดรับจอง',
+        'ปุ่มติดต่อด่วนผ่าน LINE Official Account เพื่อยืนยันคิวรับเงิน'
       ],
       en: [
-        'Real-time foreign exchange rate ticker with buy/sell spreads',
-        'Bi-directional currency converter (Buy Currency vs Sell Currency)',
+        'Real-time foreign exchange rate ticker with accurate buy/sell spread tables',
+        'Instant bi-directional currency converter (Buy Currency vs Sell Currency)',
         'Online Rate-Lock reservation system with branch pickup scheduling',
-        'Business operating hours and transaction legal terms validation',
-        'Direct LINE Official integration for instant customer service'
+        'Operating hours validation and automated booking availability checks',
+        'Direct LINE Official integration for instant confirmation and support'
       ]
     }
   },
@@ -177,19 +212,28 @@ const PROJECTS_DATA = [
     category: 'ecommerce',
     company: 'E-Commerce Marketplace',
     duration: 'Production System',
+    role: 'Full-Stack Developer',
     title: {
       th: 'ตลาดสลากไทย (LottoShop Digital Marketplace)',
       en: 'Thai Lottery Digital Marketplace'
     },
     shortDesc: {
       th: 'มาร์เก็ตเพลสสลากออนไลน์ ระบบค้นหาเลข 6 หลัก กรองเลขชุด และสรุปคำสั่งซื้อตะกร้าสินค้า',
-      en: 'Digital lottery marketplace with 6-digit number search, bundle filter, and multi-vendor checkout.'
+      en: 'Digital marketplace with 6-digit number matching search, bundle filter, and merchant management.'
     },
-    fullDesc: {
-      th: 'แพลตฟอร์มตลาดสลากออนไลน์สำหรับผู้ค้าและผู้ซื้อ ค้นหาหมายเลข 6 หลักแบบระบุตำแหน่ง กรองสลากใบเดี่ยว สลากชุด (2-10 ใบ) ระบบนับถอยหลังวันออกผลสลาก ตะกร้าสินค้าสรุปยอดคำสั่งซื้อแยกตามร้านค้า และหน้าโปรไฟล์บริหารจัดการร้านค้าตัวแทน',
-      en: 'Digital lottery marketplace connecting sellers and buyers. Includes digit-by-digit matching search, bundle filtering (single to 10-ticket packs), draw date countdown clock, multi-vendor cart aggregator, and merchant profile dashboard.'
+    problem: {
+      th: 'ลูกค้าต้องการค้นหาเลขสลากที่ตรงใจทั้ง 6 หลักหรือเฉพาะเลขท้าย/เลขหน้า รวมถึงเลือกซื้อแบบสลากชุดและสลากเดี่ยวจากตัวแทนจำหน่ายหลายราย',
+      en: 'Customers needed flexible search options across 6-digit combinations and multi-ticket bundle filters from distributed sellers.'
     },
-    tags: ['Marketplace', 'Full-Stack', 'Search Algorithm', 'Cart Checkout', 'Countdown Timer', 'Merchant Portal'],
+    solution: {
+      th: 'พัฒนา Algorithm ค้นหาหมายเลขสลากแบบแม่นยำ พร้อมตัวกรองประเภทสลาก ตะกร้าสินค้ารวมหลายร้านค้า ระบบนับถอยหลังงวดสลาก และแดชบอร์ดตัวแทน',
+      en: 'Engineered high-performance number lookup algorithm, multi-vendor cart checkout, draw countdown timer, and seller management portal.'
+    },
+    tags: ['Full-Stack', 'Search Algorithm', 'Marketplace', 'Shopping Cart', 'Vendor Portal', 'MySQL'],
+    imageTitles: {
+      th: ['หน้าแรก & ค้นหาเลข 6 หลัก', 'ตะกร้าสินค้า & สรุปยอดสั่งซื้อ', 'โปรไฟล์ร้านค้า & สถิติ', 'รายการสั่งซื้อของฉัน', 'ตัวกรองสลากชุด/สลากเดี่ยว', 'แดชบอร์ดตัวแทนจำหน่าย'],
+      en: ['6-Digit Search & Listings', 'Cart & Order Summary', 'Merchant Profile & Stats', 'Order History', 'Bundle Type Filter', 'Vendor Dashboard']
+    },
     images: [
       './Portfolio/lottoshop/1.png',
       './Portfolio/lottoshop/2.png',
@@ -200,11 +244,11 @@ const PROJECTS_DATA = [
     ],
     features: {
       th: [
-        'ระบบค้นหาเลขสลาก 6 หลักแบบอินเทอร์แอคทีฟ รองรับการสืบค้นเลขท้ายและเลขหน้า',
-        'ตัวกรองประเภทสลาก: หวยชุด, หวยแถว, หวยเล่ม, หวยก้อน',
-        'ระบบนับถอยหลังงวดสลาก (Draw Countdown) แสดงเวลาคงเหลือแบบนาทีต่อนาที',
+        'ระบบค้นหาเลขสลาก 6 หลัก รองรับทั้งค้นหาเลขท้าย เลขหน้า และค้นหาแบบเจาะจง',
+        'ตัวกรองสลาก: หวยชุด (2-10 ใบ), หวยแถว, หวยเล่ม พร้อมระบุราคารวม',
+        'ระบบนับถอยหลังวันออกสลาก (Draw Countdown) แสดงเวลาที่เหลือในการสั่งซื้อ',
         'ระบบตะกร้าสินค้า สรุปยอดรวมแยกตามร้านค้าตัวแทนอย่างโปร่งใส',
-        'แดชบอร์ดผู้ค้า: จัดการสต็อกสลาก ดูยอดขาย และตั้งค่าข้อมูลร้านค้า'
+        'แดชบอร์ดผู้ขาย: จัดการรายการสลาก ตรวจสอบคำสั่งซื้อ และสถานะการชำระเงิน'
       ],
       en: [
         'Interactive 6-digit slot search with flexible prefix/suffix lookup',
@@ -220,19 +264,28 @@ const PROJECTS_DATA = [
     category: 'agency',
     company: 'IMAGESHUBS Co., Ltd.',
     duration: '1 ปี',
+    role: 'Programmer / Web Developer',
     title: {
       th: 'Images Hubs Marketing Agency & Digital Portal',
       en: 'Images Hubs Marketing Agency & Digital Portal'
     },
     shortDesc: {
       th: 'เว็บไซต์เอเจนซีการตลาดออนไลน์ในเชียงใหม่ นำเสนอบริการดูแลสื่อ โฆษณา และผลงานลูกค้ายอดนิยม',
-      en: 'Digital marketing agency portal in Chiang Mai showcasing creative branding, advertising, and case studies.'
+      en: 'Marketing agency web portal in Chiang Mai showcasing creative branding, advertising, and case studies.'
     },
-    fullDesc: {
-      th: 'เว็บไซต์ทางการของทีมการตลาดออนไลน์ Images Hubs เชียงใหม่ ออกแบบเพื่อสร้างความน่าเชื่อถือและการแปลงเป็นลูกค้า (Conversion) นำเสนอบริการดูแล Facebook & IG, ทำปก Cover Page, ทำแบนเนอร์โพสต์โฆษณา และแบบฟอร์มติดต่อขอคำปรึกษาด่วน พร้อมการปรับแต่ง SEO เชิงลึก',
-      en: 'Official web presence for Images Hubs marketing agency. Crafted with high-impact visual aesthetics to maximize conversion rates. Features structured service tiers (Social media management, graphic banners, cover design) and customer consultation touchpoints.'
+    problem: {
+      th: 'เอเจนซีต้องการเว็บไซต์ที่สื่อสารบริการการตลาดออนไลน์อย่างชัดเจน มีความน่าเชื่อถือสูง และกระตุ้นให้ลูกค้าติดต่อขอรับคำปรึกษาได้อย่างรวดเร็ว',
+      en: 'Agency required a credible online identity clearly communicating marketing packages and driving direct client consultations.'
     },
-    tags: ['Web Agency', 'WordPress', 'SEO Optimization', 'Conversion UX', 'Landing Page', 'Social Ads'],
+    solution: {
+      th: 'ออกแบบและพัฒนาหน้า Landing Page สไตล์โมเดิร์น แยกแพ็กเกจบริการเป็นสัดส่วน ปรับแต่ง Performance ให้โหลดเร็ว และทำ SEO ให้ติดหน้าแรก Google',
+      en: 'Crafted high-converting landing page, structured transparent service tiers, optimized web vitals speed, and implemented advanced on-page SEO.'
+    },
+    tags: ['WordPress', 'SEO Optimization', 'Web Design', 'Landing Page', 'Performance', 'Social Media'],
+    imageTitles: {
+      th: ['หน้าแรก Hero Section', 'บริการออกแบบ Cover Page', 'บริการดูแล Facebook & IG', 'สิ่งที่ลูกค้าจะได้รับ', 'บริการแบนเนอร์โฆษณา'],
+      en: ['Hero Section & Showcase', 'Cover Art Design', 'Social Media Management', 'Client Deliverables', 'Ad Banners & Campaigns']
+    },
     images: [
       './Portfolio/imagehubs/1.png',
       './Portfolio/imagehubs/2.png',
@@ -242,34 +295,34 @@ const PROJECTS_DATA = [
     ],
     features: {
       th: [
-        'ส่วน Hero Section โดดเด่นพร้อมสถิติความนิยม (1,000+ ความนิยมของลูกค้า)',
-        'ส่วนจัดแสดงบริการ: ออกแบบ Cover Page, ดูแลแฟนเพจ Facebook & IG, ทำ Banner โฆษณา',
-        'ระบบนำเสนอสิทธิประโยชน์ที่ลูกค้าจะได้รับอย่างเป็นระบบ',
-        'ปุ่มติดต่อด่วนผ่านระบบแชท Messenger และแบบฟอร์มส่งข้อมูล',
-        'การปรับแต่ง SEO เชิงลึกและความเร็วหน้าเว็บเพื่ออันดับการค้นหาที่ดีขึ้น'
+        'Hero Section ดึงดูดสายตาพร้อม Social Proof ความพึงพอใจของลูกค้ากว่า 1,000 ราย',
+        'โครงสร้างนำเสนอบริการ: ออกแบบ Cover Page, ดูแลเพจ Facebook/IG, ทำ Banner โฆษณา',
+        'ระบบแสดงความคุ้มค่าและสิ่งที่ลูกค้าจะได้รับอย่างชัดเจน',
+        'ช่องทางติดต่อด่วนผ่าน Facebook Messenger และแบบฟอร์มขอใบเสนอราคา',
+        'โครงสร้างโค้ดตามหลัก SEO และความเร็วหน้าเว็บที่เหมาะสม'
       ],
       en: [
-        'Striking Hero section with social proof counters (1,000+ customer rating)',
+        'Striking Hero section with social proof counters (1,000+ satisfied clients)',
         'Modular service showcase: Brand cover art, Facebook/IG growth, ad banners',
-        'Value proposition breakdowns answering client expectations transparently',
-        'Instant Messenger chat CTA integration and lead capture forms',
-        'Advanced on-page SEO tuning and core web vitals speed optimization'
+        'Clear value proposition breakdown addressing client expectations',
+        'Instant Messenger chat CTA integration and quotation lead forms',
+        'Clean semantic SEO architecture with optimized Core Web Vitals speed'
       ]
     }
   }
 ];
 
-// Translations dictionary for bilingual switcher
+// Bilingual Translations dictionary
 const TRANSLATIONS = {
   th: {
     navAbout: 'เกี่ยวกับฉัน',
     navExp: 'ประสบการณ์ทำงาน',
     navEdu: 'การศึกษา',
-    navSkills: 'ทักษะ & เทคโนโลยี',
+    navSkills: 'ทักษะ',
     navProjects: 'ผลงาน Portfolio',
     navContact: 'ติดต่อ',
     heroBadge: 'เปิดรับโอกาสงานทันที',
-    heroTitle: 'ณัฏฐนนท์ ศรสวรรค์',
+    heroTitle: 'ณัฏฐนนท์ ศรสุวรรณ',
     heroNickname: '(นนท์)',
     heroRole: 'FULL-STACK DEVELOPER',
     heroDesc: 'Web & Software Developer ประสบการณ์เกือบ 4 ปี เชี่ยวชาญการพัฒนาระบบธุรกิจครบวงจร ทั้ง ERP, CRM, POS หลายสาขา, ระบบจอง (Booking) และ E-commerce พร้อมทักษะด้าน Web Scraping, Google Merchant และงาน WordPress เชิงลึกควบคู่กับการทำ SEO เน้นสร้างระบบที่เสถียรและแก้ปัญหาธุรกิจได้จริง',
@@ -277,11 +330,11 @@ const TRANSLATIONS = {
     btnContact: 'ติดต่อร่วมงาน',
     btnCopyEmail: 'คัดลอกอีเมล',
     statExpVal: 'เกือบ 4 ปี',
-    statExpLabel: 'ประสบการณ์พัฒนาซอฟต์แวร์',
+    statExpLabel: 'ประสบการณ์ทำงานจริง',
     statGpaVal: '3.61',
     statGpaLabel: 'GPA เกียรตินิยม มทร.ล้านนา',
     statCoreVal: 'ERP & FinTech',
-    statCoreLabel: 'ระบบโปรดักชันระดับธุรกิจ',
+    statCoreLabel: 'ระบบระดับองค์กร & ธุรกิจ',
     aboutTag: 'About Me',
     aboutTitle: 'ประวัติและข้อมูลส่วนตัว',
     infoName: 'ชื่อ-นามสกุล',
@@ -289,7 +342,6 @@ const TRANSLATIONS = {
     infoAge: 'อายุ',
     infoGender: 'เพศ',
     infoDegree: 'การศึกษา',
-    infoGpa: 'เกรดเฉลี่ยสะสม',
     infoPhone: 'เบอร์โทรศัพท์',
     infoEmail: 'อีเมล',
     infoGithub: 'GitHub Profile',
@@ -325,11 +377,11 @@ const TRANSLATIONS = {
     navAbout: 'About Me',
     navExp: 'Experience',
     navEdu: 'Education',
-    navSkills: 'Skills & Stack',
+    navSkills: 'Skills',
     navProjects: 'Portfolio',
     navContact: 'Contact',
     heroBadge: 'Available for Immediate Employment',
-    heroTitle: 'Natthanon Sonsawan',
+    heroTitle: 'Natthanon Sornsuwan',
     heroNickname: '(Non)',
     heroRole: 'FULL-STACK DEVELOPER',
     heroDesc: 'Web & Software Developer with nearly 4 years of experience specializing in full-cycle enterprise business systems: ERP, CRM, multi-branch POS, Booking platforms, and E-commerce. Experienced in Web Scraping, Google Merchant, and advanced WordPress with SEO, committed to building robust solutions that solve real business challenges.',
@@ -337,11 +389,11 @@ const TRANSLATIONS = {
     btnContact: 'Get In Touch',
     btnCopyEmail: 'Copy Email',
     statExpVal: '~4 Years',
-    statExpLabel: 'Software Engineering Experience',
+    statExpLabel: 'Engineering Experience',
     statGpaVal: '3.61',
     statGpaLabel: 'GPA Honors (RMUTL)',
     statCoreVal: 'ERP & FinTech',
-    statCoreLabel: 'Business-Grade Platforms',
+    statCoreLabel: 'Production Platforms',
     aboutTag: 'About Me',
     aboutTitle: 'Personal Profile & Bio',
     infoName: 'Full Name',
@@ -349,7 +401,6 @@ const TRANSLATIONS = {
     infoAge: 'Age',
     infoGender: 'Gender',
     infoDegree: 'Degree',
-    infoGpa: 'GPA',
     infoPhone: 'Phone',
     infoEmail: 'Email',
     infoGithub: 'GitHub Profile',
@@ -383,13 +434,11 @@ const TRANSLATIONS = {
   }
 };
 
-// Current State
 let currentLang = localStorage.getItem('natthanon_lang') || 'th';
 let currentTheme = localStorage.getItem('natthanon_theme') || 'dark';
 let activeModalProject = null;
 let activeModalImgIndex = 0;
 
-// Initialize Application
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initI18n();
@@ -399,9 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
 });
 
-/* ==========================================================================
-   Theme Management
-   ========================================================================== */
+/* Theme */
 function initTheme() {
   document.documentElement.setAttribute('data-theme', currentTheme);
   updateThemeButton();
@@ -425,9 +472,7 @@ function updateThemeButton() {
   }
 }
 
-/* ==========================================================================
-   Internationalization (TH / EN)
-   ========================================================================== */
+/* i18n */
 function initI18n() {
   applyTranslations();
 
@@ -457,13 +502,10 @@ function applyTranslations() {
   const langBtn = document.getElementById('langToggleBtn');
   if (langBtn) {
     langBtn.textContent = currentLang === 'th' ? 'EN' : 'TH';
-    langBtn.setAttribute('title', currentLang === 'th' ? 'Switch to English' : 'เปลี่ยนเป็นภาษาไทย');
   }
 }
 
-/* ==========================================================================
-   Full-View Projects Rendering with Inline Gallery & Details
-   ========================================================================== */
+/* Projects Rendering */
 function renderFullProjects(filter = 'all') {
   const container = document.getElementById('projectsFullContainer');
   if (!container) return;
@@ -480,56 +522,76 @@ function renderFullProjects(filter = 'all') {
     card.id = `project-${project.id}`;
 
     const title = project.title[currentLang];
-    const fullDesc = project.fullDesc[currentLang];
+    const problem = project.problem[currentLang];
+    const solution = project.solution[currentLang];
     const features = project.features[currentLang];
+    const imageTitles = project.imageTitles[currentLang];
 
     card.innerHTML = `
       <div class="project-full-header">
         <div class="project-header-left">
           <div class="project-badge-row">
             <span class="badge badge-cyan">${getCategoryLabel(project.category)}</span>
-            <span class="badge badge-emerald">🏢 ${project.company}</span>
-            <span class="badge">⏱️ ${project.duration}</span>
+            <span class="badge badge-emerald">${project.company}</span>
+            <span class="badge">${project.duration}</span>
+            <span class="badge badge-role">${project.role}</span>
           </div>
           <h3 class="project-full-title">${title}</h3>
         </div>
         <div class="project-header-right">
           <button class="btn btn-outline btn-sm" onclick="openProjectModal('${project.id}', 0)">
-            <span>🔍 ดูภาพขนาดใหญ่แบบเต็มจอ</span>
+            <span>ดูภาพขยายเต็มจอ</span>
           </button>
         </div>
       </div>
 
       <div class="project-full-grid">
-        <!-- Left: Image Showcase with interactive thumbnails -->
+        <!-- Gallery with Chrome Window Frame -->
         <div class="project-full-gallery">
-          <div class="project-main-display" onclick="openProjectModal('${project.id}', getActiveInlineImgIndex('${project.id}'))">
-            <img src="${project.images[0]}" alt="${title}" id="display-${project.id}" class="project-main-img" />
-            <div class="project-main-overlay">
-              <span class="overlay-btn">🔍 คลิกเพื่อขยายภาพแบบเต็มจอ (Fullscreen)</span>
+          <div class="browser-chrome-frame">
+            <div class="browser-chrome-bar">
+              <span class="chrome-dot dot-red"></span>
+              <span class="chrome-dot dot-yellow"></span>
+              <span class="chrome-dot dot-green"></span>
+              <span class="chrome-address" id="caption-${project.id}">${imageTitles[0]}</span>
+            </div>
+            <div class="project-main-display" onclick="openProjectModal('${project.id}', getActiveInlineImgIndex('${project.id}'))">
+              <img src="${project.images[0]}" alt="${title}" id="display-${project.id}" class="project-main-img" />
+              <div class="project-main-overlay">
+                <span class="overlay-btn">คลิกเพื่อขยายภาพขนาดใหญ่</span>
+              </div>
             </div>
           </div>
+
+          <!-- Thumbnails Strip with actual screen names -->
           <div class="project-inline-thumbs">
             ${project.images.map((img, idx) => `
-              <img src="${img}" 
-                   alt="Screenshot ${idx + 1}" 
-                   class="inline-thumb ${idx === 0 ? 'active' : ''}" 
-                   data-project="${project.id}"
-                   data-index="${idx}"
-                   onclick="switchInlineDisplay('${project.id}', ${idx})" />
+              <button class="inline-thumb-btn ${idx === 0 ? 'active' : ''}" 
+                      data-project="${project.id}"
+                      data-index="${idx}"
+                      onclick="switchInlineDisplay('${project.id}', ${idx})"
+                      title="${imageTitles[idx]}">
+                <img src="${img}" alt="${imageTitles[idx]}" class="inline-thumb-img" />
+                <span class="inline-thumb-title">${imageTitles[idx]}</span>
+              </button>
             `).join('')}
           </div>
         </div>
 
-        <!-- Right: Project Description & Features -->
+        <!-- Project Breakdown -->
         <div class="project-full-info">
           <div class="project-desc-block">
-            <h4>${currentLang === 'th' ? '📌 ภาพรวมของระบบ' : '📌 System Overview'}</h4>
-            <p>${fullDesc}</p>
+            <h4>โจทย์ทางธุรกิจ & ความต้องการ</h4>
+            <p>${problem}</p>
+          </div>
+
+          <div class="project-desc-block">
+            <h4>แนวทางการออกแบบและพัฒนา</h4>
+            <p>${solution}</p>
           </div>
 
           <div class="project-features-block">
-            <h4>${currentLang === 'th' ? '⚡ ฟังก์ชันหลักที่พัฒนาขึ้น (Key Features)' : '⚡ Key Implemented Features'}</h4>
+            <h4>ฟังก์ชันหลักในระบบ (Key Features)</h4>
             <ul class="features-checklist">
               ${features.map(f => `
                 <li>
@@ -541,7 +603,7 @@ function renderFullProjects(filter = 'all') {
           </div>
 
           <div class="project-stack-block">
-            <h4>${currentLang === 'th' ? '🛠️ เทคโนโลยีที่ใช้ (Tech Stack)' : '🛠️ Technologies & Stack'}</h4>
+            <h4>เทคโนโลยีที่ใช้ (Tech Stack)</h4>
             <div class="project-tags">
               ${project.tags.map(t => `<span class="project-tag">${t}</span>`).join('')}
             </div>
@@ -556,13 +618,17 @@ function renderFullProjects(filter = 'all') {
 
 function switchInlineDisplay(projectId, index) {
   const displayImg = document.getElementById(`display-${projectId}`);
+  const captionEl = document.getElementById(`caption-${projectId}`);
   const project = PROJECTS_DATA.find(p => p.id === projectId);
   if (displayImg && project && project.images[index]) {
     displayImg.src = project.images[index];
     displayImg.setAttribute('data-active-index', index);
 
-    // Update active thumb
-    const thumbs = document.querySelectorAll(`.inline-thumb[data-project="${projectId}"]`);
+    if (captionEl) {
+      captionEl.textContent = project.imageTitles[currentLang][index];
+    }
+
+    const thumbs = document.querySelectorAll(`.inline-thumb-btn[data-project="${projectId}"]`);
     thumbs.forEach((th, i) => {
       th.classList.toggle('active', i === index);
     });
@@ -582,11 +648,11 @@ window.getActiveInlineImgIndex = getActiveInlineImgIndex;
 
 function getCategoryLabel(cat) {
   const labels = {
-    erp: currentLang === 'th' ? 'ERP Platform' : 'ERP Platform',
-    hr: currentLang === 'th' ? 'HR Management' : 'HR Management',
-    ecommerce: currentLang === 'th' ? 'E-Commerce' : 'E-Commerce',
-    fintech: currentLang === 'th' ? 'FinTech' : 'FinTech',
-    agency: currentLang === 'th' ? 'Marketing Agency' : 'Marketing Agency'
+    erp: 'ERP Platform',
+    hr: 'HR Management',
+    ecommerce: 'E-Commerce',
+    fintech: 'FinTech',
+    agency: 'Marketing Agency'
   };
   return labels[cat] || cat.toUpperCase();
 }
@@ -596,7 +662,6 @@ function getCurrentFilter() {
   return activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
 }
 
-// Attach Filter Click Listeners
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -606,9 +671,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-/* ==========================================================================
-   Interactive Lightbox Modal
-   ========================================================================== */
+/* Lightbox Modal */
 function initLightboxModal() {
   const overlay = document.getElementById('projectModal');
   const closeBtn = document.getElementById('modalCloseBtn');
@@ -666,34 +729,34 @@ function updateModalContent() {
   const mainImg = document.getElementById('modalMainImg');
   const thumbsContainer = document.getElementById('modalThumbs');
   const detailsContainer = document.getElementById('modalDetails');
+  const imageTitles = project.imageTitles[currentLang];
 
   if (modalTitle) {
-    modalTitle.textContent = project.title[currentLang];
+    modalTitle.textContent = `${project.title[currentLang]} — ${imageTitles[activeModalImgIndex]}`;
   }
 
   if (mainImg) {
     mainImg.src = project.images[activeModalImgIndex];
-    mainImg.alt = `${project.title[currentLang]} - Screenshot ${activeModalImgIndex + 1}`;
+    mainImg.alt = `${project.title[currentLang]} - ${imageTitles[activeModalImgIndex]}`;
   }
 
-  // Thumbnails
   if (thumbsContainer) {
     thumbsContainer.innerHTML = project.images.map((img, idx) => `
       <img src="${img}" 
-           alt="Thumbnail ${idx + 1}" 
+           alt="${imageTitles[idx]}" 
+           title="${imageTitles[idx]}"
            class="modal-thumb ${idx === activeModalImgIndex ? 'active' : ''}" 
            onclick="setModalImageIndex(${idx})" />
     `).join('');
   }
 
-  // Details
   if (detailsContainer) {
     const features = project.features[currentLang];
     detailsContainer.innerHTML = `
-      <h4>${currentLang === 'th' ? 'ภาพรวมระบบ & สถาปัตยกรรม' : 'System Overview & Architecture'}</h4>
-      <p>${project.fullDesc[currentLang]}</p>
+      <h4>ภาพรวมของระบบ</h4>
+      <p>${project.shortDesc[currentLang]}</p>
       
-      <h4>${currentLang === 'th' ? 'ฟังก์ชันการทำงานหลัก (Key Features)' : 'Key Production Features'}</h4>
+      <h4>ฟังก์ชันหลักในระบบ (Key Features)</h4>
       <div class="modal-features-list">
         ${features.map(f => `
           <div class="modal-feature-item">
@@ -714,8 +777,12 @@ function setModalImageIndex(idx) {
   if (!activeModalProject) return;
   activeModalImgIndex = idx;
   const mainImg = document.getElementById('modalMainImg');
+  const modalTitle = document.getElementById('modalTitle');
   if (mainImg) {
     mainImg.src = activeModalProject.images[activeModalImgIndex];
+  }
+  if (modalTitle) {
+    modalTitle.textContent = `${activeModalProject.title[currentLang]} — ${activeModalProject.imageTitles[currentLang][activeModalImgIndex]}`;
   }
   document.querySelectorAll('.modal-thumb').forEach((thumb, i) => {
     thumb.classList.toggle('active', i === activeModalImgIndex);
@@ -737,16 +804,12 @@ function nextModalImage() {
 window.openProjectModal = openProjectModal;
 window.setModalImageIndex = setModalImageIndex;
 
-/* ==========================================================================
-   Copy to Clipboard & Toast Notifications
-   ========================================================================== */
+/* Clipboard & Toast */
 function copyToClipboard(text, message) {
   if (navigator.clipboard && window.isSecureContext) {
     navigator.clipboard.writeText(text).then(() => {
       showToast(message);
-    }).catch(() => {
-      fallbackCopy(text, message);
-    });
+    }).catch(() => fallbackCopy(text, message));
   } else {
     fallbackCopy(text, message);
   }
@@ -764,7 +827,7 @@ function fallbackCopy(text, message) {
     document.execCommand('copy');
     showToast(message);
   } catch (err) {
-    showToast("Copy failed, please copy manually: " + text);
+    showToast("คัดลอก: " + text);
   }
   document.body.removeChild(textArea);
 }
@@ -780,7 +843,7 @@ function showToast(message) {
 
   const toast = document.createElement('div');
   toast.className = 'toast';
-  toast.innerHTML = `<span>📋</span> <span>${message}</span>`;
+  toast.innerHTML = `<span>✓</span> <span>${message}</span>`;
   container.appendChild(toast);
 
   setTimeout(() => {
@@ -792,18 +855,16 @@ function showToast(message) {
 }
 
 window.copyEmail = function() {
-  const msg = currentLang === 'th' ? 'คัดลอกอีเมลเรียบร้อยแล้ว!' : 'Email copied to clipboard!';
+  const msg = currentLang === 'th' ? 'คัดลอกอีเมลเรียบร้อยแล้ว' : 'Email copied to clipboard';
   copyToClipboard('nonin31313@gmail.com', msg);
 };
 
 window.copyPhone = function() {
-  const msg = currentLang === 'th' ? 'คัดลอกเบอร์โทรศัพท์เรียบร้อยแล้ว!' : 'Phone number copied to clipboard!';
+  const msg = currentLang === 'th' ? 'คัดลอกเบอร์โทรเรียบร้อยแล้ว' : 'Phone number copied';
   copyToClipboard('0910798390', msg);
 };
 
-/* ==========================================================================
-   Scroll Spy & Navbar Scroll
-   ========================================================================== */
+/* Scroll Spy */
 function initScrollSpy() {
   const navbar = document.getElementById('navbar');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -850,9 +911,7 @@ function initScrollSpy() {
   }
 }
 
-/* ==========================================================================
-   Contact Form Handling
-   ========================================================================== */
+/* Contact Form */
 function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
