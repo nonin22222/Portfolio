@@ -537,33 +537,37 @@ function renderFullProjects(filter = 'all') {
             <span class="badge badge-role">${project.role}</span>
           </div>
           <h3 class="project-full-title">${title}</h3>
+          <p class="project-full-subtitle">${project.shortDesc[currentLang]}</p>
         </div>
         <div class="project-header-right">
-          <button class="btn btn-outline btn-sm" onclick="openProjectModal('${project.id}', 0)">
+          <button class="btn btn-outline btn-sm" onclick="openProjectModal('${project.id}', getActiveInlineImgIndex('${project.id}'))">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
             <span>ดูภาพขยายเต็มจอ</span>
           </button>
         </div>
       </div>
 
-      <div class="project-full-grid">
-        <!-- Gallery with Chrome Window Frame -->
-        <div class="project-full-gallery">
-          <div class="browser-chrome-frame">
-            <div class="browser-chrome-bar">
-              <span class="chrome-dot dot-red"></span>
-              <span class="chrome-dot dot-yellow"></span>
-              <span class="chrome-dot dot-green"></span>
-              <span class="chrome-address" id="caption-${project.id}">${imageTitles[0]}</span>
-            </div>
-            <div class="project-main-display" onclick="openProjectModal('${project.id}', getActiveInlineImgIndex('${project.id}'))">
-              <img src="${project.images[0]}" alt="${title}" id="display-${project.id}" class="project-main-img" />
-              <div class="project-main-overlay">
-                <span class="overlay-btn">คลิกเพื่อขยายภาพขนาดใหญ่</span>
-              </div>
-            </div>
+      <!-- 1. FULL WIDTH SCREENSHOT SHOWCASE -->
+      <div class="project-full-showcase">
+        <div class="browser-chrome-frame">
+          <div class="browser-chrome-bar">
+            <span class="chrome-dot dot-red"></span>
+            <span class="chrome-dot dot-yellow"></span>
+            <span class="chrome-dot dot-green"></span>
+            <span class="chrome-address" id="caption-${project.id}">${imageTitles[0]}</span>
+            <button class="chrome-expand-btn" onclick="openProjectModal('${project.id}', getActiveInlineImgIndex('${project.id}'))" title="ขยายดูภาพขนาดใหญ่">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              <span>ขยายภาพ</span>
+            </button>
           </div>
+          <div class="project-main-display" onclick="openProjectModal('${project.id}', getActiveInlineImgIndex('${project.id}'))" title="คลิกเพื่อเปิดดูภาพขนาดใหญ่">
+            <img src="${project.images[0]}" alt="${title}" id="display-${project.id}" class="project-main-img" />
+          </div>
+        </div>
 
-          <!-- Thumbnails Strip with actual screen names -->
+        <!-- Screenshots Selector Strip below main display -->
+        <div class="project-inline-thumbs-wrap">
+          <span class="thumbs-label">เลือกดูหน้าจอระบบ:</span>
           <div class="project-inline-thumbs">
             ${project.images.map((img, idx) => `
               <button class="inline-thumb-btn ${idx === 0 ? 'active' : ''}" 
@@ -571,27 +575,40 @@ function renderFullProjects(filter = 'all') {
                       data-index="${idx}"
                       onclick="switchInlineDisplay('${project.id}', ${idx})"
                       title="${imageTitles[idx]}">
-                <img src="${img}" alt="${imageTitles[idx]}" class="inline-thumb-img" />
+                <span class="inline-thumb-num">0${idx + 1}</span>
                 <span class="inline-thumb-title">${imageTitles[idx]}</span>
               </button>
             `).join('')}
           </div>
         </div>
+      </div>
 
-        <!-- Project Breakdown -->
-        <div class="project-full-info">
+      <!-- 2. SPACIOUS DETAILS BREAKDOWN (FULL WIDTH, 2 BALANCED COLUMNS) -->
+      <div class="project-details-grid">
+        <div class="project-details-col">
           <div class="project-desc-block">
-            <h4>โจทย์ทางธุรกิจ & ความต้องการ</h4>
+            <h4>
+              <span class="detail-icon-pill">01</span>
+              <span>โจทย์ทางธุรกิจ & ความต้องการ</span>
+            </h4>
             <p>${problem}</p>
           </div>
 
           <div class="project-desc-block">
-            <h4>แนวทางการออกแบบและพัฒนา</h4>
+            <h4>
+              <span class="detail-icon-pill">02</span>
+              <span>แนวทางการออกแบบและพัฒนา</span>
+            </h4>
             <p>${solution}</p>
           </div>
+        </div>
 
+        <div class="project-details-col">
           <div class="project-features-block">
-            <h4>ฟังก์ชันหลักในระบบ (Key Features)</h4>
+            <h4>
+              <span class="detail-icon-pill">03</span>
+              <span>ฟังก์ชันหลักในระบบ (Key Features)</span>
+            </h4>
             <ul class="features-checklist">
               ${features.map(f => `
                 <li>
@@ -603,7 +620,10 @@ function renderFullProjects(filter = 'all') {
           </div>
 
           <div class="project-stack-block">
-            <h4>เทคโนโลยีที่ใช้ (Tech Stack)</h4>
+            <h4>
+              <span class="detail-icon-pill">04</span>
+              <span>เทคโนโลยีที่ใช้ (Tech Stack)</span>
+            </h4>
             <div class="project-tags">
               ${project.tags.map(t => `<span class="project-tag">${t}</span>`).join('')}
             </div>
