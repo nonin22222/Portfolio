@@ -367,10 +367,10 @@ const TRANSLATIONS = {
     contactTag: 'Get In Touch',
     contactTitle: 'พร้อมร่วมงานกับทีมของคุณ',
     contactSubtitle: 'เปิดรับโอกาสในตำแหน่ง Full-Stack Developer / Software Engineer',
-    formName: 'ชื่อของคุณ',
-    formEmail: 'อีเมลติดต่อกลับ',
-    formMsg: 'ข้อความหรือรายละเอียดตำแหน่งงาน',
-    btnSendMsg: 'ส่งข้อความติดต่อ',
+    directContactTitle: 'ช่องทางการติดต่อโดยตรง',
+    directContactDesc: 'สามารถติดต่อผ่านอีเมล หรือโทรศัพท์ได้โดยตรง ยินดีพูดคุยและตอบกลับอย่างรวดเร็วครับ',
+    btnSendEmailNow: 'ส่งอีเมลทันที',
+    btnCallNow: 'โทรติดต่อ',
     footerRights: 'สงวนลิขสิทธิ์ ออกแบบและพัฒนาสำหรับสมัครงานตำแหน่ง Full-Stack Developer'
   },
   en: {
@@ -426,10 +426,10 @@ const TRANSLATIONS = {
     contactTag: 'Get In Touch',
     contactTitle: "Let's Build Great Products Together",
     contactSubtitle: 'Open for Full-Stack Developer and Software Engineer opportunities',
-    formName: 'Your Name',
-    formEmail: 'Your Contact Email',
-    formMsg: 'Message or Opportunity Details',
-    btnSendMsg: 'Send Inquiry',
+    directContactTitle: 'Direct Contact Channels',
+    directContactDesc: 'Feel free to reach out directly via email or phone. Open for discussion and prompt replies.',
+    btnSendEmailNow: 'Send Email Directly',
+    btnCallNow: 'Direct Phone Call',
     footerRights: 'All rights reserved. Designed & built for Full-Stack Developer job application.'
   }
 };

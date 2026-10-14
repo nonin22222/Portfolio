@@ -583,100 +583,79 @@
       </div>
 
       <div class="contact-grid">
-        <!-- Direct Contact Methods -->
+        <!-- Direct Contact Card (Full Width) -->
         <div class="contact-info-card">
-          <div>
-            <h3>ช่องทางการติดต่อโดยตรง</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.4rem;">
-              สามารถติดต่อผ่านอีเมล โทรศัพท์ หรือส่งข้อความผ่านแบบฟอร์มได้ตลอดเวลาครับ
+          <div class="contact-info-header">
+            <h3 data-i18n="directContactTitle">ช่องทางการติดต่อโดยตรง</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.4rem;" data-i18n="directContactDesc">
+              สามารถติดต่อผ่านอีเมล หรือโทรศัพท์ได้โดยตรง ยินดีพูดคุยและตอบกลับอย่างรวดเร็วครับ
             </p>
           </div>
 
-          <div class="contact-method">
-            <div class="contact-method-left">
-              <div class="contact-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <div class="contact-methods-grid">
+            <div class="contact-method">
+              <div class="contact-method-left">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div class="contact-text">
+                  <label>Email Address</label>
+                  <a href="mailto:nonin31313@gmail.com"><strong>nonin31313@gmail.com</strong></a>
+                </div>
               </div>
-              <div class="contact-text">
-                <label>Email Address</label>
-                <strong>nonin31313@gmail.com</strong>
-              </div>
+              <button class="btn btn-secondary btn-sm" onclick="copyEmail()">คัดลอก</button>
             </div>
-            <button class="btn btn-secondary btn-sm" onclick="copyEmail()">คัดลอก</button>
+
+            <div class="contact-method">
+              <div class="contact-method-left">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="contact-text">
+                  <label>Phone Number</label>
+                  <a href="tel:0910798390"><strong>091-079-8390</strong></a>
+                </div>
+              </div>
+              <button class="btn btn-secondary btn-sm" onclick="copyPhone()">คัดลอก</button>
+            </div>
+
+            <div class="contact-method">
+              <div class="contact-method-left">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </div>
+                <div class="contact-text">
+                  <label>GitHub Profile</label>
+                  <a href="https://github.com/nonin22222" target="_blank" rel="noopener"><strong>github.com/nonin22222</strong></a>
+                </div>
+              </div>
+              <a href="https://github.com/nonin22222" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">เปิดลิงก์</a>
+            </div>
+
+            <div class="contact-method">
+              <div class="contact-method-left">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="contact-text">
+                  <label>Location & Relocation</label>
+                  <strong>เชียงใหม่ (พร้อมทำงาน On-site / Remote)</strong>
+                </div>
+              </div>
+              <span class="detail-icon-pill" style="font-size: 0.72rem; padding: 4px 8px;">On-site / Remote</span>
+            </div>
           </div>
 
-          <div class="contact-method">
-            <div class="contact-method-left">
-              <div class="contact-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              <div class="contact-text">
-                <label>Phone Number</label>
-                <strong>091-079-8390</strong>
-              </div>
-            </div>
-            <button class="btn btn-secondary btn-sm" onclick="copyPhone()">คัดลอก</button>
-          </div>
-
-          <div class="contact-method">
-            <div class="contact-method-left">
-              <div class="contact-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </div>
-              <div class="contact-text">
-                <label>GitHub Profile</label>
-                <a href="https://github.com/nonin22222" target="_blank" rel="noopener"><strong>github.com/nonin22222</strong></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-method">
-            <div class="contact-method-left">
-              <div class="contact-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div class="contact-text">
-                <label>Location & Relocation</label>
-                <strong>เชียงใหม่ (พร้อมทำงาน On-site / Remote)</strong>
-              </div>
-            </div>
-          </div>
-
-          <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-subtle); display: flex; gap: 0.75rem;">
-            <a href="mailto:nonin31313@gmail.com" class="btn btn-primary" style="flex: 1;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              <span>ส่งอีเมลทันที</span>
+          <div class="contact-actions">
+            <a href="mailto:nonin31313@gmail.com" class="btn btn-primary" style="flex: 1; justify-content: center; padding: 0.9rem 1.5rem; font-size: 0.95rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span data-i18n="btnSendEmailNow">ส่งอีเมลทันที</span>
             </a>
-            <a href="tel:0910798390" class="btn btn-secondary" style="flex: 1;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <span>โทรติดต่อ</span>
+            <a href="tel:0910798390" class="btn btn-secondary" style="flex: 1; justify-content: center; padding: 0.9rem 1.5rem; font-size: 0.95rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span data-i18n="btnCallNow">โทรติดต่อ</span>
             </a>
           </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="contact-form-card">
-          <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <label for="contactName" data-i18n="formName">ชื่อของคุณ</label>
-              <input type="text" id="contactName" class="form-input" placeholder="เช่น ผู้จัดการฝ่ายบุคคล / คุณสมชาย" required />
-            </div>
-
-            <div class="form-group">
-              <label for="contactEmail" data-i18n="formEmail">อีเมลติดต่อกลับ</label>
-              <input type="email" id="contactEmail" class="form-input" placeholder="recruiter@company.com" required />
-            </div>
-
-            <div class="form-group">
-              <label for="contactMessage" data-i18n="formMsg">ข้อความหรือรายละเอียดตำแหน่งงาน</label>
-              <textarea id="contactMessage" class="form-textarea" placeholder="ระบุรายละเอียดตำแหน่งงาน บริษัท หรือข้อความที่ต้องการสอบถาม..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" data-i18n="btnSendMsg">
-              <span>ส่งข้อความติดต่อ</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
-            </button>
-          </form>
         </div>
       </div>
     </div>
