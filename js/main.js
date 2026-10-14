@@ -15,18 +15,18 @@ const PROJECTS_DATA = [
       en: 'iToolMart Enterprise ERP & Multi-Branch Inventory'
     },
     shortDesc: {
-      th: 'ระบบบริหารทรัพยากรองค์กร (ERP) ดูแลยอดขาย คลังสินค้าหลายสาขา จัดซื้อ PO และวิเคราะห์กำไรขาดทุน',
-      en: 'Enterprise ERP managing multi-branch inventory, procurement PO workflows, sales audit, and profit margins.'
+      th: 'ระบบบริหารทรัพยากรองค์กร (ERP) จัดการคลังสินค้าหลายสาขา ระบบเอกสารธุรกิจ รายรับ-รายจ่าย ภาษี และระบบบัญชีครบวงจร',
+      en: 'Enterprise ERP managing multi-branch inventory, document workflows, cashflow, tax reporting, and ledger accounting.'
     },
     problem: {
-      th: 'ธุรกิจค้าปลีก-ค้าส่งมีสินค้าหลายพันรายการและหลายสาขา จำเป็นต้องมีระบบรวมศูนย์ที่ตัดสต็อกแม่นยำ แจ้งเตือนสินค้าใกล้หมด และคำนวณต้นทุน-กำไรได้ทันทีโดยไม่ต้องรอสรุปสิ้นเดือน',
-      en: 'Wholesale & retail operations with thousands of SKUs required centralized inventory sync, threshold stock alerts, and instant profit-loss computation.'
+      th: 'ธุรกิจค้าปลีก-ค้าส่งมีสินค้าหลายพันรายการและหลายสาขา จำเป็นต้องมีระบบรวมศูนย์ที่ตัดสต็อกแม่นยำ แจ้งเตือนสินค้าใกล้หมด จัดการเอกสารซื้อขาย และคำนวณต้นทุน-ภาษี-บัญชีได้ทันทีโดยไม่ต้องรอสรุปสิ้นเดือน',
+      en: 'Wholesale & retail operations with thousands of SKUs required centralized inventory sync, threshold stock alerts, purchase/sales document workflows, and real-time cashflow/tax calculation.'
     },
     solution: {
-      th: 'ออกแบบฐานข้อมูล MySQL เชื่อมโยงทุกสาขา พัฒนาแดชบอร์ดกราฟ Highcharts แสดงยอดขายและกำไรแบบเรียลไทม์ พร้อมระบบออกเอกสาร PO และ Export ข้อมูลเป็น Excel/PDF',
-      en: 'Architected relational MySQL schema, built responsive Highcharts dashboards for real-time financials, and implemented automated PO generation with Excel/PDF export.'
+      th: 'ออกแบบฐานข้อมูล MySQL เชื่อมโยงหลายสาขา พัฒนาระบบเอกสารธุรกิจ (ใบเสนอราคา, ใบสั่งซื้อ PO, ใบสำคัญจ่าย, ใบลดหนี้) ระบบบันทึกรายรับ-รายจ่ายและภาษี พร้อมระบบบัญชี สินทรัพย์ ธนาคาร และแดชบอร์ดสรุปผลกำไรแบบเรียลไทม์',
+      en: 'Architected relational MySQL schema, built full business document workflows (Quotations, POs, Vouchers, Credit Notes), cashflow & tax management, and banking/asset accounting modules with Highcharts dashboards.'
     },
-    tags: ['PHP', 'MySQL', 'Node.js', 'ERP Architecture', 'Highcharts', 'Excel/PDF Export', 'RBAC'],
+    tags: ['PHP', 'MySQL', 'Node.js', 'ERP Architecture', 'เอกสาร & บัญชี', 'Highcharts', 'Excel/PDF Export', 'RBAC'],
     imageTitles: {
       th: ['แดชบอร์ดภาพรวมยอดขาย', 'คลังสินค้า & สต็อก', 'ระบบจัดซื้อ (PO)', 'บันทึกยอดขายรายวัน', 'สถิติการขายแยกสาขา'],
       en: ['Financial Dashboard', 'Stock & Inventory', 'Procurement (PO)', 'Daily Sales Ledger', 'Branch Analytics']
@@ -40,18 +40,20 @@ const PROJECTS_DATA = [
     ],
     features: {
       th: [
-        'แดชบอร์ดสรุปรายรับ-รายจ่าย ยอดซื้อ และกำไรสุทธิ แสดงกราฟ Highcharts รายเดือน',
-        'ระบบบริหารคลังสินค้า ตรวจสอบสินค้าคงเหลือ และแจ้งเตือนเมื่อสต็อกต่ำกว่าเกณฑ์',
-        'ระบบสร้างและจัดการใบสั่งซื้อ (PO) กรองตามช่วงวันที่และส่งออกรายงาน Excel ได้ทันที',
-        'ระบบบันทึกยอดขายและใบเสร็จ แยกตามพนักงานขาย สาขา และประเภทการชำระเงิน',
-        'ระบบกำหนดสิทธิ์การเข้าถึง (Role-Based Access Control) ป้องกันข้อมูลรั่วไหล'
+        'ระบบเอกสารธุรกิจ: ออกและจัดการใบเสนอราคา, ใบขอสั่งซื้อ (PO), ใบเสนอซื้อ, ใบสำคัญจ่าย และใบลดหนี้',
+        'ระบบรายรับ-รายจ่าย & ภาษี: บันทึกรายการรับจ่ายรายวัน พร้อมระบบสรุปรายการภาษี',
+        'ระบบบัญชี & ธนาคาร: จัดการสินทรัพย์, บัญชีธนาคาร, รายการเดินบัญชีย้อนหลัง และสมุดรายวันบัญชี',
+        'ระบบบริหารคลังสินค้าหลายสาขา: ตรวจสอบสต็อกคงเหลือ ตัดสต็อกอัตโนมัติ และแจ้งเตือนสต็อกต่ำกว่าเกณฑ์',
+        'แดชบอร์ดวิเคราะห์ยอดขาย: กราฟ Highcharts สรุปยอดขาย รายรับ-รายจ่าย และกำไรสุทธิตามช่วงเวลา',
+        'ระบบกำหนดสิทธิ์การเข้าถึง (RBAC): แยกสิทธิ์ตามแผนกและบทบาท ป้องกันข้อมูลทางการเงินรั่วไหล'
       ],
       en: [
-        'Real-time financial dashboard with Highcharts monthly income/expense graphs',
-        'Multi-branch inventory tracker with automated low-stock threshold warnings',
-        'Procurement purchase order (PO) workflow with date-range filters and Excel export',
-        'Sales and receipt audit log categorized by salesperson, branch, and payment method',
-        'Granular Role-Based Access Control (RBAC) safeguarding sensitive business data'
+        'Document Workflows: Quotations, Purchase Orders (PO), Requisitions, Payment Vouchers, and Credit Notes',
+        'Revenue, Expense & Tax: Daily transaction ledger with automated tax computation and reporting',
+        'Accounting & Banking: Fixed asset tracking, bank accounts, transaction statement history, and general journal',
+        'Multi-Branch Inventory: Centralized inventory lookup with automated low-stock threshold warnings',
+        'Financial Dashboard: Interactive Highcharts visualizing sales, expenses, and net profit margins',
+        'Granular Role-Based Access Control (RBAC) safeguarding sensitive enterprise financial data'
       ]
     }
   },
