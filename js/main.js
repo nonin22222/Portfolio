@@ -68,18 +68,18 @@ const PROJECTS_DATA = [
       en: 'Dee.Farm HR Management & Payroll Platform'
     },
     shortDesc: {
-      th: 'ระบบบริหารงานบุคคล บันทึกเวลาเข้า-ออกงาน อนุมัติวันลา และคำนวณบัญชีเงินเดือน (Payroll)',
-      en: 'Human Resource Management system featuring digital attendance, leave workflow, and automated payroll.'
+      th: 'ระบบบริหารงานบุคคล (HRM) และเอกสารธุรกิจองค์กร: บันทึกเวลาเข้า-ออกงาน อนุมัติวันลา คำนวณเงินเดือน พร้อมระบบจัดการเอกสาร (ใบเสนอราคา, ใบสำคัญจ่าย, ใบลดหนี้, ใบเสร็จ, ใบสั่งซื้อ PO)',
+      en: 'Human Resource Management & Enterprise Operations: digital attendance, leave approvals, payroll, and business documentation workflows (Quotations, Vouchers, Credit Notes, Receipts, PO).'
     },
     problem: {
-      th: 'การลงเวลาทำงานด้วยกระดาษหรือเครื่องสแกนเดิมคำนวณสถิติการมาสาย วันลาคงเหลือ และเงินเดือนพนักงานได้ล่าช้าและเกิดข้อผิดพลาดง่าย',
-      en: 'Manual punch cards and offline attendance tracking caused discrepancies in leave quotas and delayed monthly payroll calculations.'
+      th: 'องค์กรต้องการระบบศูนย์กลางที่ดูแลทั้งงานบุคคล (ลงเวลา/วันลา/เงินเดือน) ควบคู่กับงานเอกสารธุรกิจที่เกี่ยวข้อง โดยลดความซ้ำซ้อนของเอกสารกระดาษและเชื่อมโยงข้อมูลได้อย่างเป็นระบบ',
+      en: 'Organizations needed an integrated operations portal unifying HR attendance, leave, and payroll with digital business documentation workflows, eliminating manual paper friction.'
     },
     solution: {
-      th: 'พัฒนาระบบ Web Clock-in/Clock-out บันทึกเวลาออนไลน์พร้อมคำนวณสถิติสาย-ขาด-ลาอัตโนมัติ เชื่อมโยงเข้าสู่ระบบคำนวณเงินเดือน (Payroll) และออกสลิปเงินเดือน',
-      en: 'Built web-based clock-in/out attendance tracking, automated leave requests with approval hierarchies, and payroll slip computation.'
+      th: 'พัฒนาระบบ Web Clock-in/Clock-out คำนวณสาย-ขาด-ลา และเงินเดือน (Payroll) อัตโนมัติ พร้อมระบบจัดการเอกสารธุรกิจครบวงจร (ออกใบเสนอราคา, ใบสำคัญจ่าย, ใบลดหนี้, ใบเสร็จรับเงิน, ใบสั่งซื้อ PO) และส่งออกรายงาน PDF/Excel',
+      en: 'Engineered web attendance and automated payroll integrated with comprehensive enterprise document processing (Quotations, Payment Vouchers, Credit Notes, Receipts, Purchase Orders) and automated PDF/Excel export.'
     },
-    tags: ['Vue.js', 'PHP', 'Node.js', 'MySQL', 'HRM', 'Payroll Engine', 'Calendar Integration'],
+    tags: ['Vue.js', 'PHP', 'Node.js', 'MySQL', 'HRM & Payroll', 'เอกสารธุรกิจ (ใบเสนอราคา/PO/ใบเสร็จ)', 'Document Workflow'],
     imageTitles: {
       th: ['แดชบอร์ดลงเวลาทำงาน', 'ประวัติพนักงาน & สิทธิ์ลา', 'บัญชีเงินเดือน (Payroll)', 'ระบบจัดการคำขอลา'],
       en: ['Attendance Dashboard', 'Employee Master & Leave', 'Payroll Ledger', 'Leave Request Manager']
@@ -92,18 +92,20 @@ const PROJECTS_DATA = [
     ],
     features: {
       th: [
-        'แดชบอร์ดพนักงานส่วนบุคคล: ปุ่มลงเวลาเข้างาน-เลิกงาน และแสดงโควตาวันลาคงเหลือ',
-        'ระบบยื่นคำขอลา (ลาป่วย, ลากิจ, ลาพักร้อน) พร้อมระบุเหตุผลและสถานะการอนุมัติ',
-        'ระบบบัญชีเงินเดือน (Payroll) แสดงประวัติการจ่ายเงินย้อนหลัง และออกสลิปเงินเดือน',
-        'ระบบจัดการประวัติพนักงาน ข้อมูลติดต่อฉุกเฉิน บัญชีธนาคาร และประวัติการศึกษา',
-        'ปฏิทินบริษัทแสดงวันหยุดตามประเพณีและกำหนดการสำคัญขององค์กร'
+        'ระบบเอกสารธุรกิจครบวงจร: ออกและจัดการใบเสนอราคา, ใบสำคัญจ่าย, ใบลดหนี้, ใบเสร็จรับเงิน และใบขอสั่งซื้อ (PO)',
+        'ระบบบัญชีเงินเดือน (Payroll): คำนวณเงินเดือน สถิติการมาสาย-ขาด-ลา อัตโนมัติ พร้อมออกสลิปเงินเดือน',
+        'แดชบอร์ดพนักงานส่วนบุคคล: ปุ่มลงเวลาเข้างาน-เลิกงาน (Clock-in/out) และแสดงโควตาวันลาคงเหลือแบบเรียลไทม์',
+        'ระบบยื่นคำขอลาออนไลน์: อนุมัติวันลา (ลาป่วย, ลากิจ, ลาพักร้อน) พร้อมระบุเหตุผลและสถานะการพิจารณา',
+        'ระบบจัดการประวัติพนักงาน: ทะเบียนข้อมูลส่วนตัว บัญชีธนาคาร ประวัติการศึกษา และเอกสารสัญญาจ้าง',
+        'ปฏิทินบริษัท: แสดงวันหยุดตามประเพณี กำหนดการสำคัญ และรอบการจ่ายเงินเดือนขององค์กร'
       ],
       en: [
-        'Personal employee portal: 1-click clock in/out, remaining quota, tardiness logs',
-        'Digital leave management workflow (Sick, Personal, Vacation) with manager approvals',
-        'Comprehensive payroll ledger with payment receipts and exportable slips',
-        'Employee master file repository including emergency contacts and banking data',
-        'Interactive organization calendar highlighting public holidays and company events'
+        'Enterprise Document Workflow: Digital Quotations, Payment Vouchers, Credit Notes, Receipts, and Purchase Orders (PO)',
+        'Automated Payroll Engine: Monthly salary computation, attendance deduction algorithms, and exportable pay slips',
+        'Employee Portal & Attendance: Digital clock in/out tracking, live remaining leave quotas, and tardiness metrics',
+        'Digital Leave Approvals: Structured manager approval hierarchy for sick, personal, and annual vacations',
+        'Employee Records Repository: Secure storage for emergency contacts, bank accounts, and employment contracts',
+        'Company Operations Calendar: Centralized timeline for national holidays, payroll runs, and corporate milestones'
       ]
     }
   },
