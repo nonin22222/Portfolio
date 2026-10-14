@@ -884,6 +884,11 @@ window.copyPhone = function() {
   copyToClipboard('0910798390', msg);
 };
 
+window.copyLine = function() {
+  const msg = currentLang === 'th' ? 'คัดลอก LINE ID (nonin123456) เรียบร้อยแล้ว' : 'LINE ID (nonin123456) copied to clipboard';
+  copyToClipboard('nonin123456', msg);
+};
+
 /* Scroll Spy */
 function initScrollSpy() {
   const navbar = document.getElementById('navbar');
